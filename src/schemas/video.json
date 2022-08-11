@@ -1,0 +1,24 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "category": {
+      "type": "Select",
+      "config": {
+        "options": ["Initiative", "Awards", "Tribe", "Guild", "Event"],
+        "label": "Category"
+      }
+    },
+    "url": {
+      "type": "Embed",
+      "config": {
+        "label": "URL"
+      }
+    }
+  }
+}

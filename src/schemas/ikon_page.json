@@ -1,0 +1,139 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "hero": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Hero"
+      }
+    }
+  },
+  "Intro": {
+    "intro": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Intro"
+      }
+    },
+    "slides": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "slide_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "slide_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading6",
+              "label": "Title"
+            }
+          },
+          "slide_loop": {
+            "type": "Link",
+            "config": {
+              "select": "media",
+              "label": "Loop"
+            }
+          },
+          "to": {
+            "type": "Select",
+            "config": {
+              "options": ["Awards", "Guild", "Tribe"],
+              "label": "To"
+            }
+          }
+        },
+        "label": "Slides"
+      }
+    }
+  },
+  "About": {
+    "about_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "arms": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "arm_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "arm_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading6",
+              "label": "Title"
+            }
+          },
+          "arm_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Description"
+            }
+          }
+        },
+        "label": "Arms"
+      }
+    }
+  },
+  "Gallery": {
+    "featured_gallery": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": ["gallery"],
+        "label": "Featured Gallery"
+      }
+    }
+  },
+  "Videos": {
+    "featured_videos": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "video": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": ["video"],
+              "label": "Video"
+            }
+          }
+        },
+        "label": "Featured Videos"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "Order"
+      }
+    },
+    "hero": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Hero"
+      }
+    },
+    "explainer": {
+      "type": "Embed",
+      "config": {
+        "label": "Explainer"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "loop": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Loop"
+      }
+    }
+  }
+}

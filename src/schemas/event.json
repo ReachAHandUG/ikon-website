@@ -1,0 +1,45 @@
+{
+  "Main": {
+    "section": {
+      "type": "Select",
+      "config": {
+        "options": ["Initiative", "Awards", "Tribe", "Guild"],
+        "label": "Section"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "date": {
+      "type": "Date",
+      "config": {
+        "label": "Date"
+      }
+    },
+    "venue": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading6",
+        "label": "Venue"
+      }
+    },
+    "video": {
+      "type": "Embed",
+      "config": {
+        "label": "Video"
+      }
+    },
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  }
+}

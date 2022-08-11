@@ -1,0 +1,42 @@
+{
+  "Main": {
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "Order"
+      }
+    },
+    "type": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "Media",
+          "Organizer",
+          "Sponsor"
+        ],
+        "label": "Type"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "logo": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Logo"
+      }
+    },
+    "website": {
+      "type": "Link",
+      "config": {
+        "label": "Website"
+      }
+    }
+  }
+}

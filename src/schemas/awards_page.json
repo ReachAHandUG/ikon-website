@@ -1,0 +1,155 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Description"
+      }
+    },
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  },
+  "Intro": {
+    "background_video": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Background Video"
+      }
+    },
+    "left_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Left Image"
+      }
+    },
+    "center_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Center Image"
+      }
+    },
+    "right_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Right Image"
+      }
+    }
+  },
+  "Categories": {
+    "categories_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Description"
+      }
+    }
+  },
+  "Harness": {
+    "harness_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "harness_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    },
+    "harness_loop": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Loop"
+      }
+    }
+  },
+  "Rooted": {
+    "rooted_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "rooted_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    },
+    "rooted_loop": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Loop"
+      }
+    }
+  },
+  "Nominations & Judging": {
+    "nomination_description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Description"
+      }
+    },
+    "criteria": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "criteria_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          },
+          "criteria_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading6",
+              "label": "Title"
+            }
+          },
+          "criteria_description": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Description"
+            }
+          }
+        },
+        "label": "Criteria"
+      }
+    }
+  }
+}

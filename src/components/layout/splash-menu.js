@@ -34,8 +34,8 @@ const Logo = styled.div`
   }
 
   .page & {
-    opacity: 0; 
-    visibility: hidden; 
+    opacity: 0;
+    visibility: hidden;
   }
 `
 
@@ -79,6 +79,13 @@ const Ele = () => {
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">
           Tribe
         </Link>
+        <a
+          href="https://fellowship.theikon.org"
+          target="_blank"
+          className="futura-pt"
+        >
+          Fellowship
+        </a>
       </Wrap>
     </Box>
   )

@@ -170,6 +170,18 @@ const Ele = () => {
             </div>
           </Link>
         </li>
+        <li>
+          <a
+            href="https://fellowship.theikon.org"
+            target="_blank"
+            className="futura-pt"
+          >
+            <span>Fellowship</span>
+            <div>
+              <Icon title="pattern-c"></Icon>
+            </div>
+          </a>
+        </li>
         {/* <li>
                     <Link to="/" className="futura-pt">
                         <span>Media</span>

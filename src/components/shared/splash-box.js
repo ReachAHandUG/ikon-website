@@ -36,7 +36,7 @@ const Box = styled.section`
   }
 `
 
-export default ({ children, theme }) => {
+const Ele = ({ children, theme }) => {
   const [ele, eleInView] = useInView()
   const dispatch = useGlobalDispatchContext()
   const { active_section } = useGlobalStateContext()
@@ -80,3 +80,5 @@ export default ({ children, theme }) => {
     </Box>
   )
 }
+
+export default Ele

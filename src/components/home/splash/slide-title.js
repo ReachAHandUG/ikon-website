@@ -31,15 +31,12 @@ const Box = styled.div`
     margin-bottom: 0;
   }
 
-  @media screen and (max-width: 766px){
-
+  @media screen and (max-width: 766px) {
     &:first-child {
       margin-top: 5rem;
     }
   }
 `
-
-
 
 const Pattern = styled.div`
   height: 0.875rem;
@@ -56,22 +53,22 @@ const Pattern = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
 
-    .educate &  {
-      background-image: url('${patternA}');
+    .educate & {
+      background-image: url("${patternA}");
     }
 
-    .connect &  {
-        background-image: url('${patternB}');
+    .connect & {
+      background-image: url("${patternB}");
     }
 
-    .award &  {
-        background-image: url('${patternC}');
+    .award & {
+      background-image: url("${patternC}");
     }
   }
 
   .is-active & {
     &:after {
-      animation: ${rotate} 1s linear both infinite; 
+      animation: ${rotate} 1s linear both infinite;
     }
   }
 
@@ -82,7 +79,9 @@ const Pattern = styled.div`
       left: auto;
     `}
 
-    .page-has-loaded & { animation: ${moveUp} 1.5s ease both;}
+  .page-has-loaded & {
+    animation: ${moveUp} 1.5s ease both;
+  }
 `
 
 const Text = styled.div`
@@ -163,7 +162,7 @@ const Line = styled.span`
   }
 `
 
-export default ({ label, index, className, to }) => {
+const Ele = ({ label, index, className, to }) => {
   const [delay, setDelay] = useState(1)
 
   useEffect(() => {
@@ -194,3 +193,5 @@ export default ({ label, index, className, to }) => {
     </Box>
   )
 }
+
+export default Ele

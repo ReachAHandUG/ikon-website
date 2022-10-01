@@ -20,16 +20,16 @@ const Box = styled.div`
 const Bkg = styled.figure`
   position: absolute;
   width: 100%;
-  height: 100%; 
-  background-size: contain; 
-  background-image: url('${Pattern}');
-  background-position: center; 
+  height: 100%;
+  background-size: contain;
+  background-image: url("${Pattern}");
+  background-position: center;
   background-repeat: no-repeat;
-  top:0; 
+  top: 0;
   left: 0;
   z-index: -1;
   opacity: 0.04;
-  transform: scale(1.3)
+  transform: scale(1.3);
 `
 
 const Items = styled.div`
@@ -251,7 +251,6 @@ export const ClanData = () => {
                   text
                 }
                 explainer {
-                  video_id
                   embed_url
                 }
                 hero {

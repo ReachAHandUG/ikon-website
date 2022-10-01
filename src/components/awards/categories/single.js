@@ -288,7 +288,7 @@ const EmbedWrap = styled.div`
 const Ele = () => {
   const { show_category } = useGlobalStateContext()
   const [category, setCategory] = useState()
-  const [index, setIndex] = useState()
+  // const [index, setIndex] = useState()
   const dispatch = useGlobalDispatchContext()
 
   const [wipe, setWipe] = useState()
@@ -334,7 +334,7 @@ const Ele = () => {
   useEffect(() => {
     if (show_category.length > 0) {
       setCategory(show_category[0])
-      setIndex(show_category[0].index)
+      // setIndex(show_category[0].index)
     }
   }, [show_category])
 

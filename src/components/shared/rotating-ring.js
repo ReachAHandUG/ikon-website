@@ -91,7 +91,7 @@ const Box = styled.div`
   }
 `
 
-export default ({ type, scale, speed, opacity, fill, theme }) => {
+const Ele = ({ type, scale, speed, opacity, fill, theme }) => {
   const [obj, objInView] = useInView()
 
   const styles = {
@@ -151,3 +151,5 @@ export default ({ type, scale, speed, opacity, fill, theme }) => {
     </Box>
   )
 }
+
+export default Ele

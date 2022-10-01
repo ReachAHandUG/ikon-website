@@ -116,7 +116,7 @@ const Ele = ({ label, fill, type, to, method }) => {
       )}
 
       {method === "external-link" && (
-        <a href={to} target="_blank">
+        <a href={to} target="_blank" rel="noreferrer">
           <Box className={fill + " " + type}>
             <Wrap className="futura-pt">
               <Label className="label">

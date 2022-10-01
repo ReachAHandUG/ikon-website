@@ -6,10 +6,10 @@ import About from "../components/home/about/wrap"
 import IkonLogo from "../components/shared/ikon-logo"
 import Gallery from "../components/home/featured-gallery"
 import Events from "../components/home/events"
-import Video from '../components/home/featured-video'
+import Video from "../components/home/featured-video"
 import { useGlobalDispatchContext } from "../utilities/context"
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const dispatch = useGlobalDispatchContext()
   const pageData = data.prismicIkonPage.data
 
@@ -47,6 +47,8 @@ export default ({ data }) => {
     </>
   )
 }
+
+export default Page
 
 export const query = graphql`
   query IndexQuery {

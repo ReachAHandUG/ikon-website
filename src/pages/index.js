@@ -7,7 +7,6 @@ import IkonLogo from "../components/shared/ikon-logo"
 import Gallery from "../components/home/featured-gallery"
 import Events from "../components/home/events"
 import Video from '../components/home/featured-video'
-// import Stream from "../components/home/stream"
 import { useGlobalDispatchContext } from "../utilities/context"
 
 export default ({ data }) => {

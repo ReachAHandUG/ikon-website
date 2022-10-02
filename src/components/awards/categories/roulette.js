@@ -50,13 +50,19 @@ const Geo = styled.button`
   display: inline-block;
   flex-shrink: 0;
   position: relative;
-  padding: 1.25vw;
+
   padding-bottom: 4vw;
   text-align: center;
   perspective: 1000px;
   height: 21vw;
   margin-bottom: 3vw;
   color: #b98027;
+
+  .card-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 1.25vw;
+  }
 
   &:hover {
     img {
@@ -257,6 +263,7 @@ const Ele = () => {
   //set awards list
   const [awardsList, setAwardsList] = useState([])
   useEffect(() => {
+    console.log("rendering")
     if (awards.length) {
       setAwardsList(awards)
     }
@@ -292,16 +299,14 @@ const Ele = () => {
                           setSelectedAward(index)
                         }}
                       >
-                        <InView delay={index}>
-                          <Card front>
+                        <Card>
+                          <div className="card-wrap">
                             <Image>
                               <img src={item.image} alt="" />
                             </Image>
-                            {/* <Number>{index + 1}</Number> */}
                             <h2 className="futura-pt">{item.title}</h2>
-                          </Card>
-                          <Card back />
-                        </InView>
+                          </div>
+                        </Card>
                       </Geo>
                     ))}
                   </Items>
@@ -309,7 +314,6 @@ const Ele = () => {
               </Section>
             )
           })}
-        <Bkg />
       </Box>
     </>
   )

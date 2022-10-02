@@ -50,6 +50,32 @@ const Ele = ({ data }) => {
 
   const formSections = [
     {
+      title: "Personal Details",
+      caption: "",
+      fields: [
+        {
+          type: "text",
+          name: "firstName",
+          label: "First Name",
+        },
+        {
+          type: "text",
+          name: "lastName",
+          label: "Last Name",
+        },
+        {
+          type: "email",
+          name: "email",
+          label: "Email",
+        },
+        {
+          type: "text",
+          name: "phoneNumber",
+          label: "Phone Number",
+        },
+      ],
+    },
+    {
       title: "Production Details",
       caption: "",
       fields: [

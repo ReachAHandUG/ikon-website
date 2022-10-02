@@ -91,8 +91,7 @@ const Ele = ({ children, formData, formName }) => {
 
   const encodeFormData = () => {
     let data = { "form-name": formName, ...formData }
-
-    debugger
+    console.log(data)
 
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))

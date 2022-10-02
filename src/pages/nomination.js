@@ -118,7 +118,7 @@ const Ele = ({ data }) => {
         },
         {
           type: "text",
-          name: "productionTrailerLink",
+          name: "productionPoster",
           required: false,
           label: "Production Poster (e.g Google Drive, DropBox link)",
         },
@@ -312,9 +312,6 @@ const Ele = ({ data }) => {
   useEffect(() => {
     let formKeys = {
       botField: "",
-      filmAwardCategories: "",
-      tvAwardCategories: "",
-      specialAwardCategories: "",
     }
 
     formSections.forEach(formSection => {
@@ -328,10 +325,7 @@ const Ele = ({ data }) => {
   const handleChange = e => {
     let name = e.target.name
     let value = e.target.value
-
     setFormData(formData => ({ ...formData, [name]: value }))
-
-    console.log(formData)
   }
 
   const handleCheckboxChange = e => {

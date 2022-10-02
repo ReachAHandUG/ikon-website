@@ -1,6 +1,5 @@
 import React from "react"
 import Glimmer from "../../shared/glimmer"
-import Outline from "../../shared/outline"
 import Header from "./header"
 import Box from "./box"
 import Roulette from "./roulette"

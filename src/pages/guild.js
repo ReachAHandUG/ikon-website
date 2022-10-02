@@ -4,6 +4,7 @@ import Meta from "../utilities/seo"
 import Splash from "../components/guild/wrap"
 import { useGlobalDispatchContext } from "../utilities/context"
 import { graphql } from "gatsby"
+import GuildMembers from "../components/guild/guildMembers"
 
 const Main = styled.main`
   background: #000;
@@ -42,6 +43,7 @@ const Page = ({ data }) => {
 
       <Main>
         <Splash />
+        <GuildMembers />
       </Main>
     </>
   )

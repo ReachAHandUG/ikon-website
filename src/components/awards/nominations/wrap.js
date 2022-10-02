@@ -18,8 +18,8 @@ const Ele = () => {
         <div className="cta">
           <Button
             type="box"
-            to="https://docs.google.com/forms/d/1zL1xqDuUNqL95-CeO4uS0Upx9iDxRHo-f8aa0Mor_Aw/prefill"
-            method="external-link"
+            to="/nomination"
+            method="link"
             label="Submit Nomination"
           />
           <Button

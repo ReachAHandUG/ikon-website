@@ -6,6 +6,13 @@ import Check from "../../images/elements/tick.svg"
 
 const Wrap = styled.form`
   position: relative;
+
+  .fill-width {
+    width: 100%;
+    display: block;
+    padding-bottom: 2rem;
+  }
+
   .form-footer {
     text-align: center;
     position: relative;

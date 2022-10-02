@@ -270,7 +270,7 @@ const Ele = ({ data }) => {
         {
           type: "checkboxGroup",
           name: "filmAwardCategories",
-          label: "",
+          label: "Film Award Categories",
           options: filmAwardCategories,
         },
       ],
@@ -286,7 +286,7 @@ const Ele = ({ data }) => {
         {
           type: "checkboxGroup",
           name: "tvAwardCategories",
-          label: "",
+          label: "TV Award Categories",
           options: tvAwardCategories,
         },
       ],
@@ -301,7 +301,7 @@ const Ele = ({ data }) => {
         {
           type: "checkboxGroup",
           name: "specialAwardCategories",
-          label: "",
+          label: "Special Award Categories",
           options: specialAwardCategories,
         },
       ],
@@ -431,6 +431,12 @@ const Ele = ({ data }) => {
 
                                   {formField.type === "checkboxGroup" && (
                                     <>
+                                      <label
+                                        className="fill-width"
+                                        htmlFor={formField.name}
+                                      >
+                                        Tick {formField.label}
+                                      </label>
                                       {formField.options.map(
                                         (checkbox, checkboxIndex) => {
                                           return (

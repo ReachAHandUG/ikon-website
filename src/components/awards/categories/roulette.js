@@ -336,7 +336,7 @@ export const Awards = () => {
                   embed_url
                 }
                 hero {
-                  fluid {
+                  fluid(maxWidth: 720) {
                     src
                   }
                 }

@@ -286,9 +286,8 @@ const EmbedWrap = styled.div`
 `
 
 const Ele = () => {
-  const { show_category } = useGlobalStateContext()
-  const [category, setCategory] = useState()
-  // const [index, setIndex] = useState()
+  const { selected_award } = useGlobalStateContext()
+  const [category, setCategory] = useState(null)
   const dispatch = useGlobalDispatchContext()
 
   const [wipe, setWipe] = useState()
@@ -296,47 +295,19 @@ const Ele = () => {
   const wipeBox = useRef()
   const closeBtn = useRef()
 
-  // const goBack = () => {
-  //   setWipe("show")
-  //   setTimeout(() => {
-  //     if (index !== 0 && index !== 12) {
-  //       let newIndex = index - 1
-  //       dispatch({
-  //         type: "FETCH_CATEGORY",
-  //         value: newIndex,
-  //       })
-  //     }
-  //   }, 500)
-  // }
-
-  // const goNext = () => {
-  //   setWipe("show")
-  //   setTimeout(() => {
-  //     if (index !== 0 && index !== 12) {
-  //       let newIndex = index + 1
-  //       dispatch({
-  //         type: "FETCH_CATEGORY",
-  //         value: newIndex,
-  //       })
-  //     }
-  //   }, 500)
-  // }
-
-  const closeCategory = () => {
+  const clearSelectedAward = () => {
     setCategory()
-
     dispatch({
-      type: "SHOW_CATEGORY",
-      value: [],
+      type: "SET_SELECTED_AWARD",
+      value: null,
     })
   }
 
   useEffect(() => {
-    if (show_category.length > 0) {
-      setCategory(show_category[0])
-      // setIndex(show_category[0].index)
+    if (selected_award != null) {
+      setCategory(selected_award)
     }
-  }, [show_category])
+  }, [selected_award])
 
   useEffect(() => {
     wipeBox.current.addEventListener("animationend", () => {
@@ -359,10 +330,7 @@ const Ele = () => {
   }, [wrapInView])
 
   return (
-    <Box
-      ref={wrap}
-      className={category && show_category.length > 0 ? "show" : "hide"}
-    >
+    <Box ref={wrap} className={selected_award != null ? "show" : "hide"}>
       <Transition ref={wipeBox} className={wipe} />
       {/* <Nav>
         <button
@@ -417,7 +385,7 @@ const Ele = () => {
       <Close
         ref={closeBtn}
         onClick={() => {
-          closeCategory()
+          clearSelectedAward()
         }}
       >
         <span></span>

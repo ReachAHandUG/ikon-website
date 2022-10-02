@@ -1,18 +1,20 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styled, { css } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import InView from "../../shared/in-view"
 import Pattern from "../../../images/elements/round-pattern-a.svg"
-import {
-  useGlobalDispatchContext,
-  useGlobalStateContext,
-} from "../../../utilities/context"
+import { useGlobalDispatchContext } from "../../../utilities/context"
+import StackedTitle from "../../shared/stacked-title"
+import PatternStrip from "../../shared/pattern-block"
 
 const Box = styled.div`
-  padding: 9.25vw 0 6vw;
+  padding: 2vw 0 0;
   position: relative;
+  width: 80%;
+  margin: 0 auto;
 
   @media screen and (max-width: 766px) {
+    width: 100%;
     padding: 4.5rem 0 3.5rem;
   }
 `
@@ -36,7 +38,7 @@ const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
   transition: transform 0.5s;
-  justify-content: center;
+  /* justify-content: left; */
 
   @media screen and (max-width: 1023px) {
     justify-content: flex-start;
@@ -44,7 +46,7 @@ const Items = styled.div`
 `
 
 const Geo = styled.button`
-  width: 14%;
+  width: 20%;
   display: inline-block;
   flex-shrink: 0;
   position: relative;
@@ -53,7 +55,7 @@ const Geo = styled.button`
   text-align: center;
   perspective: 1000px;
   height: 21vw;
-  margin-bottom: 6vw;
+  margin-bottom: 3vw;
   color: #b98027;
 
   &:hover {
@@ -120,6 +122,41 @@ const Card = styled.div`
 
   h2 {
     font-size: 0.875rem;
+    padding-top: 1rem;
+  }
+`
+
+const Section = styled.section`
+  padding-bottom: 5rem;
+  position: relative;
+
+  .title {
+    padding-left: 0;
+    padding-bottom: 2rem;
+
+    h1 {
+      padding-left: 1.2rem;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #ff9800;
+      width: 100%;
+      right: 0;
+      top: 0;
+      height: 1px;
+      opacity: 25%;
+    }
+    .o-pattern-block {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 `
 
@@ -176,62 +213,102 @@ const Image = styled.figure`
 `
 
 const Ele = () => {
-  let categories = []
-  ClanData().forEach((clan, index) => {
+  let awards = []
+  let awardsByCategory = [
+    {
+      title: "Film",
+      list: [],
+    },
+    {
+      title: "TV",
+      list: [],
+    },
+    {
+      title: "Special",
+      list: [],
+    },
+  ]
+
+  Awards().forEach((clan, index) => {
     const node = clan.node.data
-    categories.push({
+    const awardCategory = clan.node.data.category
+
+    const awardData = {
       index: index,
       title: node.title.text,
       description: node.description.text,
       image: node.hero.fluid.src,
       explainer: node.explainer ? node.explainer.embed_url : null,
       loop: node.loop.url,
-    })
-  })
-  const dispatch = useGlobalDispatchContext()
-  const { fetch_category } = useGlobalStateContext()
+    }
 
-  const showCategory = index => {
+    let awardGroup = awardsByCategory.find(
+      group => group.title == awardCategory
+    )
+
+    awards.push(awardData)
+    if (awardGroup) {
+      awardGroup.list.push(awardData)
+    } else {
+      console.log("group not found for " + node.title.text)
+    }
+  })
+
+  //set awards list
+  const [awardsList, setAwardsList] = useState([])
+  useEffect(() => {
+    if (awards.length) {
+      setAwardsList(awards)
+    }
+  }, [])
+
+  const dispatch = useGlobalDispatchContext()
+
+  const setSelectedAward = index => {
     dispatch({
-      type: "SHOW_CATEGORY",
-      value: [categories[index]],
+      type: "SET_SELECTED_AWARD",
+      value: awardsList[index],
     })
   }
-
-  useEffect(() => {
-    if (fetch_category) {
-      dispatch({
-        type: "SHOW_CATEGORY",
-        value: [categories[fetch_category - 1]],
-      })
-    }
-  }, [fetch_category, categories, dispatch])
 
   return (
     <>
       <Box>
-        <Items>
-          {categories &&
-            categories.map((item, index) => (
-              <Geo
-                key={index}
-                onClick={() => {
-                  showCategory(index)
-                }}
-              >
-                <InView delay={index}>
-                  <Card front>
-                    <Image>
-                      <img src={item.image} alt="" />
-                    </Image>
-                    <Number>{index + 1}</Number>
-                    <h2 className="futura-pt">{item.title}</h2>
-                  </Card>
-                  <Card back />
-                </InView>
-              </Geo>
-            ))}
-        </Items>
+        {awards &&
+          awardsByCategory.map((category, key) => {
+            return (
+              <Section key={key}>
+                <div className="title">
+                  <StackedTitle theme="cream" first={category.title} />
+                  <PatternStrip />
+                </div>
+
+                {category.list.length && (
+                  <Items>
+                    {category.list.map((item, index) => (
+                      <Geo
+                        key={index}
+                        onClick={() => {
+                          setSelectedAward(index)
+                        }}
+                      >
+                        <InView delay={index}>
+                          <Card front>
+                            <Image>
+                              <img src={item.image} alt="" />
+                            </Image>
+                            {/* <Number>{index + 1}</Number> */}
+                            <h2 className="futura-pt">{item.title}</h2>
+                          </Card>
+                          <Card back />
+                        </InView>
+                      </Geo>
+                    ))}
+                  </Items>
+                )}
+              </Section>
+            )
+          })}
         <Bkg />
       </Box>
     </>
@@ -239,7 +316,7 @@ const Ele = () => {
 }
 export default Ele
 
-export const ClanData = () => {
+export const Awards = () => {
   const data = useStaticQuery(
     graphql`
       query ClansQuery {
@@ -247,6 +324,7 @@ export const ClanData = () => {
           edges {
             node {
               data {
+                category
                 description {
                   text
                 }

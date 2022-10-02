@@ -6,6 +6,7 @@ import { AwardsPageData } from "../data"
 const Box = styled.div`
   position: relative;
   text-align: center;
+  padding-bottom: 4rem;
 
   h1 {
     color: #b98027;

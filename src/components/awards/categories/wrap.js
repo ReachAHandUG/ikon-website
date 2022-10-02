@@ -9,7 +9,6 @@ const Ele = () => {
   return (
     <Box id="sec-categories">
       <Glimmer />
-      <Outline title="twelve" />
       <Header />
       <Roulette />
     </Box>

@@ -132,7 +132,7 @@ const Ele = () => {
 
           <div>
             <span className="futura-pt section-title">Email</span>
-            <p>ikon@reachahand.org</p>
+            <p>ikon@sautiplus.org</p>
           </div>
 
           <div>

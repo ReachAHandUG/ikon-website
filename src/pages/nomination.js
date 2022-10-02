@@ -320,6 +320,8 @@ const Ele = ({ data }) => {
       })
     })
     setFormData(formKeys)
+
+    console.log(formKeys)
   }, [])
 
   const handleChange = e => {
@@ -355,18 +357,19 @@ const Ele = ({ data }) => {
   }
 
   const checkCondition = formSection => {
-    if (formSection.conditionKey) {
-      let conditionKey = formSection.conditionKey
-      let conditionValue = formSection.conditionValue
-      if (formData) {
-        let currentValue = formData[conditionKey]
-        return currentValue == conditionValue
-      } else {
-        return false
-      }
-    } else {
-      return true
-    }
+    return true
+    // if (formSection.conditionKey) {
+    //   let conditionKey = formSection.conditionKey
+    //   let conditionValue = formSection.conditionValue
+    //   if (formData) {
+    //     let currentValue = formData[conditionKey]
+    //     return currentValue == conditionValue
+    //   } else {
+    //     return false
+    //   }
+    // } else {
+    //   return true
+    // }
   }
 
   const dispatch = useGlobalDispatchContext()
@@ -430,13 +433,13 @@ const Ele = ({ data }) => {
                                   )}
 
                                   {formField.type === "checkboxGroup" && (
-                                    <>
-                                      <label
+                                    <fieldset>
+                                      <legend
                                         className="fill-width"
                                         htmlFor={formField.name}
                                       >
-                                        Tick {formField.label}
-                                      </label>
+                                        {formField.label}
+                                      </legend>
                                       {formField.options.map(
                                         (checkbox, checkboxIndex) => {
                                           return (
@@ -449,7 +452,7 @@ const Ele = ({ data }) => {
                                           )
                                         }
                                       )}
-                                    </>
+                                    </fieldset>
                                   )}
                                 </div>
                               )

@@ -10,12 +10,14 @@ const Box = styled.section`
   padding-bottom: 5.5rem;
 
   .checkboxGroup {
-    display: flex;
-    flex-wrap: wrap;
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
 
-    > div {
-      width: 50%;
-      padding-bottom: 0.3rem;
+      > div {
+        width: 50%;
+        padding-bottom: 0.3rem;
+      }
     }
   }
 

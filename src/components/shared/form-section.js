@@ -14,7 +14,7 @@ const Box = styled.section`
       display: flex;
       flex-wrap: wrap;
 
-      > div {
+      > label {
         width: 50%;
         padding-bottom: 0.3rem;
       }

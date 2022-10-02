@@ -1,21 +1,19 @@
 import * as React from "react"
 import styled from "styled-components"
 
-const Box = styled.div`
+const Box = styled.label`
   line-height: 1;
   /* Customize the label (the container) */
-  .container {
-    display: block;
-    position: relative;
-    padding-left: 2.25rem;
-    margin-bottom: 0.75rem;
-    cursor: pointer;
+  display: block;
+  position: relative;
+  padding-left: 2.25rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .label {
     padding-top: 0.37rem;
@@ -24,7 +22,7 @@ const Box = styled.div`
   }
 
   /* Hide the browser's default checkbox */
-  .container input {
+  input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -43,12 +41,12 @@ const Box = styled.div`
   }
 
   /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+  &:hover input ~ .checkmark {
     background-color: rgba(255, 255, 255, 25%);
   }
 
   /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+  input:checked ~ .checkmark {
     background-color: #b98027;
   }
 
@@ -60,12 +58,12 @@ const Box = styled.div`
   }
 
   /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+  input:checked ~ .checkmark:after {
     display: block;
   }
 
   /* Style the checkmark/indicator */
-  .container .checkmark:after {
+  .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -80,18 +78,16 @@ const Box = styled.div`
 
 const Ele = ({ label, name, change }) => {
   return (
-    <Box>
-      <label className="container">
-        <span className="label">{label}</span>
-        <input
-          onChange={change}
-          value={label}
-          name={name}
-          className="input"
-          type="checkbox"
-        />
-        <span className="checkmark"></span>
-      </label>
+    <Box className="container">
+      <span className="label">{label}</span>
+      <input
+        onChange={change}
+        value={label}
+        name={name}
+        className="input"
+        type="checkbox"
+      />
+      <span className="checkmark"></span>
     </Box>
   )
 }

@@ -434,10 +434,7 @@ const Ele = ({ data }) => {
 
                                   {formField.type === "checkboxGroup" && (
                                     <fieldset>
-                                      <legend
-                                        className="fill-width"
-                                        htmlFor={formField.name}
-                                      >
+                                      <legend className="fill-width">
                                         {formField.label}
                                       </legend>
                                       {formField.options.map(

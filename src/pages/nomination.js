@@ -4,55 +4,358 @@ import { Link } from "gatsby"
 import Form from "../components/shared/form"
 import FormSection from "../components/shared/form-section"
 import Input from "../components/shared/input"
+import Checkbox from "../components/shared/checkbox"
 import { graphql } from "gatsby"
 import { useGlobalDispatchContext } from "../utilities/context"
 
 const Ele = ({ data }) => {
   const pageData = data.prismicAwardsPage.data
-  const [formData, setFormData] = useState({
-    botField: "",
-    nomineeStory: "",
-    theVenture: "",
-    hasAwards: "",
-    hasBeenNominated: "",
-    theInnovation: "",
-    theImpact: "",
-    firstName: "",
-    lastName: "",
-    middleName: "",
-    age: "",
-    ikonCategory: "",
-    discovery: "",
-    email: "",
-    phoneNumber: "",
-    physicalAddress: "",
-    gender: "",
-    boxAddress: "",
-    district: "",
-    nominator1Name: "",
-    nominator1Position: "",
-    nominator1Email: "",
-    nominator1Phone: "",
-    nominator2Name: "",
-    nominator2Position: "",
-    nominator2Email: "",
-    nominator2Phone: "",
-  })
+
+  const filmAwardCategories = [
+    "Best Lead Actor",
+    "Best Supporting Actor",
+    "Best Lead Actress",
+    "Best Supporting Actress",
+    "Best Sound",
+    "Best Editor",
+    "Best Lighting Technician",
+    "Best Visual Effects",
+    "Best Feature Film",
+    "Best Director of Photography",
+    "Best Short Film",
+    "Best Production Designer",
+    "Best Director",
+    "Best Costume Designer",
+    "Best Makeup and Hairstyling",
+    "Best Student Film",
+    "Best Animation Film",
+  ]
+
+  const tvAwardCategories = [
+    "Best Lead Actor in a TV Drama",
+    "Best Lead Actress in a TV Drama",
+    "Best Performance in a TV Comedy",
+    "Best Host in TV Show",
+    "Best TV Documentary",
+    "Best TV Comedy",
+    "Best TV Drama",
+    "Best Supporting Actress in TV Drama",
+    "Best Supporting Actor in TV Drama",
+  ]
+
+  const specialAwardCategories = [
+    "Best Film (Non-Ugandan/Out of Uganda)",
+    "Best Uganda Actor/Actress in the Diaspora",
+  ]
+
+  const formSections = [
+    {
+      title: "Production Details",
+      caption: "",
+      fields: [
+        {
+          type: "text",
+          name: "productionTitle",
+          label: "Production Title",
+        },
+        {
+          type: "text",
+          name: "productionDuration",
+          label: "Duration (minutes)",
+        },
+        {
+          type: "text",
+          name: "shootingFormat",
+          label: "Shooting Format",
+        },
+        {
+          type: "text",
+          name: "aspectRatio",
+          label: "Aspect Ratio",
+        },
+        {
+          type: "text",
+          name: "completionDate",
+          label: "Completion Date",
+        },
+        {
+          type: "text",
+          name: "productionCompany",
+          required: false,
+          label: "Production Company (where applicable)",
+        },
+        {
+          type: "text",
+          name: "productionTrailerLink",
+          required: false,
+          label: "Trailer link (e.g YouTube link)",
+        },
+        {
+          type: "text",
+          name: "productionTrailerLink",
+          required: false,
+          label: "Production Poster (e.g Google Drive, DropBox link)",
+        },
+      ],
+    },
+    {
+      title: "Screening History",
+      caption: "",
+      fields: [
+        {
+          type: "textarea",
+          name: "productionAiringStations",
+          label:
+            "List any top three channels/stations where your production has aired (include dates)",
+        },
+        {
+          type: "textarea",
+          name: "productionFestivalScreenings",
+          label:
+            "List festivals and any other place where your production has screened starting with the major ones (include dates):",
+        },
+        {
+          type: "text",
+          name: "productionPremiereDate",
+          label: "What date was the production premiered?",
+        },
+        {
+          type: "text",
+          name: "productionPremiereFormat",
+          label: "Was the premier private or public?",
+        },
+      ],
+    },
+    {
+      title: "Director",
+      caption: "",
+      fields: [
+        {
+          type: "text",
+          name: "directorName",
+          label: "Name",
+        },
+        {
+          type: "text",
+          name: "directorPostalAddress",
+          label: "Postal Address:",
+          required: false,
+        },
+        {
+          type: "text",
+          name: "directorPhysicalAddress",
+          label: "Physical Address:",
+        },
+        {
+          type: "text",
+          name: "directorMobileNumber",
+          label: "Mobile Phone Number",
+        },
+        {
+          type: "email",
+          name: "directorEmail",
+          label: "Email",
+        },
+        {
+          type: "text",
+          name: "directorWebsite",
+          label: "Website",
+        },
+        {
+          type: "text",
+          name: "directorNationality",
+          label: "Nationality",
+        },
+      ],
+    },
+    {
+      title: "Producer",
+      caption: "",
+      fields: [
+        {
+          type: "text",
+          name: "producerName",
+          label: "Name",
+        },
+        {
+          type: "text",
+          name: "producerPostalAddress",
+          label: "Postal Address:",
+          required: false,
+        },
+        {
+          type: "text",
+          name: "producerPhysicalAddresss",
+          label: "Physical Address:",
+        },
+        {
+          type: "text",
+          name: "producerMobileNumber",
+          label: "Mobile Phone Number",
+        },
+        {
+          type: "email",
+          name: "producerEmail",
+          label: "Email",
+        },
+        {
+          type: "text",
+          name: "producerWebsite",
+          label: "Website",
+        },
+        {
+          type: "text",
+          name: "producerNationality",
+          label: "Nationality",
+        },
+      ],
+    },
+    {
+      title: "Full Cast & Crew",
+      caption:
+        "Please provide a link to the full list of your cast and crew. For each individual, provide a name, email and phone number. (Google Drive, Dropbox etc)",
+      fields: [
+        {
+          type: "text",
+          name: "productionCastCrewLink",
+          label: "Cast & Crew List Link",
+        },
+      ],
+    },
+    {
+      title: "Submission Category",
+      caption: "",
+      fields: [
+        {
+          type: "select",
+          name: "submissionCategory",
+          label: "Select your submission Category",
+          options: ["Film", "TV", "Special - (Non-Ugandan)"],
+        },
+      ],
+    },
+    {
+      title: "Film - Categories",
+      conditionKey: "submissionCategory",
+      conditionValue: "Film",
+      caption:
+        "Please tick the categories the entry should be considered for. These categories are open for Ugandan Filmmakers only.",
+      fields: [
+        {
+          type: "checkboxGroup",
+          name: "filmAwardCategories",
+          label: "",
+          options: filmAwardCategories,
+        },
+      ],
+    },
+
+    {
+      title: "TV - Categories",
+      conditionKey: "submissionCategory",
+      conditionValue: "TV",
+      caption:
+        "Please tick the categories the entry should be considered for. These categories are open for Ugandan Filmmakers only.",
+      fields: [
+        {
+          type: "checkboxGroup",
+          name: "tvAwardCategories",
+          label: "",
+          options: tvAwardCategories,
+        },
+      ],
+    },
+
+    {
+      title: "Special Awards - Categories",
+      conditionKey: "submissionCategory",
+      conditionValue: "Special - (Non-Ugandan)",
+      caption: "",
+      fields: [
+        {
+          type: "checkboxGroup",
+          name: "specialAwardCategories",
+          label: "",
+          options: specialAwardCategories,
+        },
+      ],
+    },
+  ]
+  const [formData, setFormData] = useState()
+
+  useEffect(() => {
+    let formKeys = {
+      botField: "",
+      filmAwardCategories: "",
+      tvAwardCategories: "",
+      specialAwardCategories: "",
+    }
+
+    formSections.forEach(formSection => {
+      formSection.fields.forEach(formField => {
+        formKeys[formField.name] = ""
+      })
+    })
+    setFormData(formKeys)
+  }, [])
 
   const handleChange = e => {
     let name = e.target.name
     let value = e.target.value
+
     setFormData(formData => ({ ...formData, [name]: value }))
+
+    console.log(formData)
+  }
+
+  const handleCheckboxChange = e => {
+    let name = e.target.name
+    let value = e.target.value
+
+    //get current values
+    let values = formData[name]
+
+    if (values !== "") {
+      let valuesList = values.split(",")
+
+      if (valuesList.includes(value)) {
+        //remove item
+        let index = valuesList.findIndex(ele => ele === value)
+        valuesList.splice(index, 1)
+      } else {
+        //add item
+        valuesList.push(value)
+      }
+      setFormData(formData => ({ ...formData, [name]: valuesList.toString() }))
+    } else {
+      setFormData(formData => {
+        return { ...formData, [name]: value }
+      })
+    }
+  }
+
+  const checkCondition = formSection => {
+    if (formSection.conditionKey) {
+      let conditionKey = formSection.conditionKey
+      let conditionValue = formSection.conditionValue
+      if (formData) {
+        let currentValue = formData[conditionKey]
+        return currentValue == conditionValue
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
   }
 
   const dispatch = useGlobalDispatchContext()
 
   useEffect(() => {
     dispatch({
-      type: "SHOW_CATEGORY",
-      value: [],
+      type: "SET_SELECTED_AWARD",
+      value: null,
     })
-
     let body = document.getElementsByTagName("body")[0]
     body.style.overflow = "visible"
   }, [])
@@ -73,254 +376,79 @@ const Ele = ({ data }) => {
         }}
       >
         <Form formName="submitNomination" formData={formData}>
-          <FormSection
-            index="1"
-            title="The Nominee's Story"
-            caption="We would like to hear the Nominee’s story, especially how you/they identified the opportunity / innovation, how it was made to happen, and how you/they were able to maintain high personal standards during the “challenging times” of starting your/their initiative."
-          >
-            <Input
-              change={handleChange}
-              type="textarea"
-              rows="7"
-              name="nomineeStory"
-              label="Your Story (250 words)"
-            ></Input>
-          </FormSection>
+          {formSections &&
+            formSections.map((formSection, formSectionIndex) => {
+              return (
+                <div key={formSectionIndex}>
+                  {checkCondition(formSection) && (
+                    <FormSection
+                      key={formSectionIndex}
+                      index={formSectionIndex + 1}
+                      title={formSection.title}
+                      caption={formSection.caption ? formSection.caption : ""}
+                    >
+                      <div className="stack">
+                        {formSection.fields &&
+                          formSection.fields.map(
+                            (formField, formFieldIndex) => {
+                              return (
+                                <div
+                                  key={formFieldIndex}
+                                  className={formField.type}
+                                >
+                                  {formField.type !== "checkboxGroup" && (
+                                    <Input
+                                      change={handleChange}
+                                      type={formField.type}
+                                      name={formField.name}
+                                      label={formField.label}
+                                      options={formField.options}
+                                      required={
+                                        !formField.required ? true : false
+                                      }
+                                    ></Input>
+                                  )}
 
-          <FormSection
-            index="2"
-            title="The Venture/Initiative"
-            byline="an overview of current operations"
-            caption="Please give a brief overview of the venture (i.e. organization or project) including – but not limited to – the following points: The mission of the organization, length of operation, the industry in which it operates e.g. agriculture (meat), services (financial) and a description of the target market e.g. nature and size."
-          >
-            <Input
-              change={handleChange}
-              label="Your Venture (250 words)"
-              type="textarea"
-              rows="7"
-              name="theVenture"
-            ></Input>
-
-            <div className="stack">
-              <Input
-                change={handleChange}
-                name="hasAwards"
-                label="Have you or the Venture received any other awards / recognition?"
-                options={["yes", "no"]}
-              />
-
-              <Input
-                change={handleChange}
-                type="select"
-                name="hasBeenNominated"
-                label="Have you or the Venture been previously nominated for this award?"
-                options={["yes", "no"]}
-              />
-            </div>
-          </FormSection>
-
-          <FormSection
-            index="3"
-            title="The Innovation"
-            byline="the new idea that has been implemented"
-            caption="Please describe the NEW idea (i.e. the innovation) that the Nominee has championed and include: how this opportunity was spotted, how this opportunity was then exploited (i.e. how an idea was made into a reality), the way this innovation is different to what was previously being done and the competitive advantage this innovation has given the organization."
-          >
-            <Input
-              change={handleChange}
-              type="textarea"
-              label="Describe innovation (250 words)"
-              rows="7"
-              name="theInnovation"
-            ></Input>
-          </FormSection>
-
-          <FormSection
-            index="4"
-            title="The Impact"
-            byline="the nature of the change brought by the innovation"
-            caption="This impact can be upon: The market or industry (e.g. creating demand), the community (e.g. improving local employment / development) and the organization (e.g. increasing retention rates) Please describe the nature and scope of impact of the Nominee’s innovation. In addition, we are also interested in hearing about the Nominee’s visions or plans for future growth or “spread” of the innovation (e.g locally, nationally, and internationally)."
-          >
-            <Input
-              change={handleChange}
-              label="Describe Impact (250 words)"
-              type="textarea"
-              rows="7"
-              name="theImpact"
-            ></Input>
-          </FormSection>
-
-          <FormSection index="5" title="About You">
-            <div className="stack">
-              <Input
-                change={handleChange}
-                type="text"
-                label="First Name"
-                name="firstName"
-              />
-              <Input
-                change={handleChange}
-                type="text"
-                label="Last Name"
-                name="lastName"
-              />
-              <Input
-                change={handleChange}
-                type="text"
-                label="Middle Name (optional)"
-                name="middleName"
-                optional={true}
-              />
-              <Input
-                change={handleChange}
-                type="number"
-                label="Age"
-                name="age"
-              />
-              <Input
-                change={handleChange}
-                type="select"
-                name="ikonCategory"
-                label="What category would you like to submit to?"
-                options={[
-                  "Social Entrepreneurship",
-                  "Business",
-                  "Employer iKon Award",
-                  "Public Health ",
-                  "Innovation and ICT",
-                  "Sports",
-                  "Journalism - Broadcast",
-                  "Journalism - New media",
-                  "Farming and Agro-Processing",
-                  "The Creative Arts - Performing Arts, musicians, poets, actors and actresses",
-                  "The Creative Arts - Film & photography",
-                  "The Creative Arts - Fashion and Design",
-                  "Climate action",
-                  "Young Philanthropist",
-                ]}
-              />
-              <Input
-                change={handleChange}
-                type="select"
-                name="discovery"
-                label="How did you hear about IKON Awards?"
-                options={["Radio", "TV", "Social Media"]}
-              ></Input>
-            </div>
-          </FormSection>
-
-          <FormSection index="6" title="Your Contacts">
-            <div className="stack">
-              <Input
-                change={handleChange}
-                type="email"
-                name="email"
-                label="Email"
-              />
-              <Input
-                change={handleChange}
-                type="text"
-                name="phoneNumber"
-                label="Phone Number"
-              />
-              <Input
-                change={handleChange}
-                type="text"
-                name="physicalAddress"
-                label="Physical Address"
-              />
-              <Input
-                change={handleChange}
-                type="gender"
-                name="gender"
-                label="Gender"
-              />
-              <Input
-                change={handleChange}
-                type="text"
-                optional={true}
-                name="boxAddress"
-                label="Box Address"
-              />
-              <Input
-                change={handleChange}
-                type="districts"
-                label="District"
-                name="district"
-              />
-            </div>
-          </FormSection>
-
-          <FormSection
-            index="7"
-            title="Nominators"
-            caption="Please submit two nominators who are knowledgeable about the entrepreneurial venture"
-          >
-            <section>
-              <h3>Nominator 1</h3>
-              <div className="stack">
-                <Input
-                  change={handleChange}
-                  type="text"
-                  label="Full Name"
-                  name="nominator1Name"
-                />
-                <Input
-                  change={handleChange}
-                  type="text"
-                  label="Position"
-                  name="nominator1Position"
-                />
-                <Input
-                  change={handleChange}
-                  type="email"
-                  name="nominator1Email"
-                  label="Email"
-                />
-                <Input
-                  change={handleChange}
-                  type="text"
-                  name="nominator1Phone"
-                  label="Phone Number"
-                />
-              </div>
-            </section>
-
-            <section>
-              <h3>Nominator 2</h3>
-              <div className="stack">
-                <Input
-                  change={handleChange}
-                  type="text"
-                  label="Full Name"
-                  name="nominator2Name"
-                />
-                <Input
-                  change={handleChange}
-                  type="text"
-                  label="Position"
-                  name="nominator2Position"
-                />
-                <Input
-                  change={handleChange}
-                  type="email"
-                  name="nominator2Email"
-                  label="Email"
-                />
-                <Input
-                  change={handleChange}
-                  type="text"
-                  name="nominator2Phone"
-                  label="Phone Number"
-                />
-              </div>
-            </section>
-          </FormSection>
+                                  {formField.type === "checkboxGroup" && (
+                                    <>
+                                      {formField.options.map(
+                                        (checkbox, checkboxIndex) => {
+                                          return (
+                                            <Checkbox
+                                              key={checkboxIndex}
+                                              name={formField.name}
+                                              label={checkbox}
+                                              change={handleCheckboxChange}
+                                            />
+                                          )
+                                        }
+                                      )}
+                                    </>
+                                  )}
+                                </div>
+                              )
+                            }
+                          )}
+                      </div>
+                    </FormSection>
+                  )}
+                </div>
+              )
+            })}
 
           <FormSection index="8" title="Declaration">
             <p>
               By submitting this form you confirm that all information provided
               is correct to the best of my knowledge and that you agree to the
-              IKON <Link to="/terms-of-use">Terms of use</Link> and{" "}
+              IKON{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/file/d/1KGvd4FWHIqbRSkhh2otEiRd0QCtMi2F8/view"
+              >
+                submission terms & conditions
+              </a>{" "}
+              <Link to="/terms-of-use">Terms of use</Link> and{" "}
               <Link to="/privacy-policy">Privacy Policy</Link>
             </p>
           </FormSection>

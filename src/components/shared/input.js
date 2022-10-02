@@ -24,7 +24,7 @@ const Box = styled.div`
     font-weight: 500;
     display: block;
     font-size: 0.75rem;
-    color: #c39f63;
+    color: #fff;
     padding-bottom: 0.75rem;
   }
 

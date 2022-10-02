@@ -9,6 +9,16 @@ const Box = styled.section`
   position: relative;
   padding-bottom: 5.5rem;
 
+  .checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      width: 50%;
+      padding-bottom: 0.3rem;
+    }
+  }
+
   h2 {
     font-size: 1.25rem;
     padding: 3rem 0;
@@ -56,6 +66,11 @@ const Box = styled.section`
       padding-right: 1rem;
       &:nth-child(2n + 2) {
         margin-right: 0;
+      }
+
+      &.checkboxGroup {
+        width: 100%;
+        padding: 0;
       }
     }
   }

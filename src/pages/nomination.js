@@ -357,18 +357,19 @@ const Ele = ({ data }) => {
   }
 
   const checkCondition = formSection => {
-    if (formSection.conditionKey) {
-      let conditionKey = formSection.conditionKey
-      let conditionValue = formSection.conditionValue
-      if (formData) {
-        let currentValue = formData[conditionKey]
-        return currentValue == conditionValue
-      } else {
-        return false
-      }
-    } else {
-      return true
-    }
+    return true
+    // if (formSection.conditionKey) {
+    //   let conditionKey = formSection.conditionKey
+    //   let conditionValue = formSection.conditionValue
+    //   if (formData) {
+    //     let currentValue = formData[conditionKey]
+    //     return currentValue == conditionValue
+    //   } else {
+    //     return false
+    //   }
+    // } else {
+    //   return true
+    // }
   }
 
   const dispatch = useGlobalDispatchContext()

@@ -33,7 +33,7 @@ const Ele = () => {
     <Box>
       <InView animation="fade-in">
         <p>{GuildData().description.text}</p>
-        <span className="futura-pt">Scroll</span>
+        <span className="futura-pt">Scroll Down</span>
       </InView>
     </Box>
   )

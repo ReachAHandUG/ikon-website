@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Meta from "../utilities/seo"
 import Splash from "../components/guild/wrap"
@@ -9,7 +9,7 @@ import GuildMembers from "../components/guild/guildMembers"
 const Main = styled.main`
   background: #000;
   position: relative;
-  z-index: 0;
+  z-index: 99999999;
 `
 
 const Page = ({ data }) => {
@@ -40,10 +40,8 @@ const Page = ({ data }) => {
           width: pageData.image.dimensions.width,
         }}
       />
-
       <Main>
-        <Splash />
-        <GuildMembers />
+        <GuildMembers pageData={pageData} />
       </Main>
     </>
   )

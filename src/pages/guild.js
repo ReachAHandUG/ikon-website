@@ -9,7 +9,7 @@ import GuildMembers from "../components/guild/guildMembers"
 const Main = styled.main`
   background: #000;
   position: relative;
-  z-index: 99999999;
+  z-index: 2;
 `
 
 const Page = ({ data }) => {

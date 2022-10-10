@@ -56,8 +56,8 @@ const Box = styled.div`
   &.center {
     top: 2.5vw;
     left: calc(50% - 6.506vw);
-    width: 13.012vw;
-    height: 4.678vw;
+    width: 14vw;
+    height: 5vw;
     transform: scale3d(0.75, 0.75, 0.75);
 
     &.awards,

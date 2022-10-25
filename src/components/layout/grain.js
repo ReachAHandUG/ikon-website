@@ -61,4 +61,6 @@ const Box = styled.div`
   will-change: transform;
 `
 
-export default () => <Box />
+const Ele = () => <Box />
+
+export default Ele

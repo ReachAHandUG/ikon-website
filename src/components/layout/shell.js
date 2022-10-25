@@ -12,9 +12,9 @@ import Preloader from "./preloader"
 import Category from "../awards/categories/single"
 import MenuToggle from "./menu-toggle"
 import TopMenu from "./splash-menu"
-import ScrollDownPrompt from './scroll-down-prompt'
+import ScrollDownPrompt from "./scroll-down-prompt"
 
-export default ({ children }) => {
+const Ele = ({ children }) => {
   return (
     <Provider>
       <Theme>
@@ -35,3 +35,5 @@ export default ({ children }) => {
     </Provider>
   )
 }
+
+export default Ele

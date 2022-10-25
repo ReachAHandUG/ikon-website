@@ -13,7 +13,7 @@ const Box = styled.div`
   position: absolute;
 `
 
-export default ({ opacity, scale, fill }) => {
+const Ele = ({ opacity, scale, fill }) => {
   const styles = {
     opacity: opacity,
     transform: "scale3d(" + scale + "," + scale + "," + scale + ")",
@@ -22,3 +22,5 @@ export default ({ opacity, scale, fill }) => {
 
   return <Box style={styles} />
 }
+
+export default Ele

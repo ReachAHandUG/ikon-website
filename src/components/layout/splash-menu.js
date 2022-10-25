@@ -83,6 +83,7 @@ const Ele = () => {
           href="https://fellowship.theikon.org"
           target="_blank"
           className="futura-pt"
+          rel="noreferrer"
         >
           Fellowship
         </a>

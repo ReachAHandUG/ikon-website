@@ -6,6 +6,7 @@ const defaultState = {
   active_section: "",
   show_category: [],
   fetch_category: 0,
+  selected_award: null,
 }
 
 const GlobalStateContext = createContext(defaultState)
@@ -31,6 +32,13 @@ const globalReducer = (state, action) => {
       return {
         ...state,
         show_category: action.value,
+      }
+    }
+
+    case "SET_SELECTED_AWARD": {
+      return {
+        ...state,
+        selected_award: action.value,
       }
     }
 

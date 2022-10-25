@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled, { css } from "styled-components"
-import { moveUp } from "../shared/animations"
+import { moveUp } from "./animations"
 import { useInView } from "react-intersection-observer"
 
 const Box = styled.div`
@@ -76,7 +76,7 @@ const Text = styled.span`
 
   /* awards */
   .splash & {
-    font-size: 3.75rem;
+    font-size: 3.75rem !important;
 
     ${props =>
       props.italic &&

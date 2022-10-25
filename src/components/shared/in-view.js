@@ -15,7 +15,7 @@ const Box = styled.div`
   &.fade-in-left {
     transition-delay: 0.2s;
     opacity: 0;
-    transition: transform 1.45s, opacity 1.45s;
+    transition: transform 1s, opacity 1s;
     &.is-visible {
       opacity: 1;
       transform: none;
@@ -35,7 +35,7 @@ const Ele = ({ children, animation, delay }) => {
   const [obj, objInView] = useInView()
   const [visible, setVisible] = useState("")
   let style = {
-    transitionDelay: delay ? delay / 35 + "s" : "",
+    transitionDelay: delay ? delay / 50 + "s" : "",
   }
 
   useEffect(() => {

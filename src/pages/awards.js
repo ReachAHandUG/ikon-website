@@ -8,6 +8,7 @@ import Accolade from "../components/awards/accolade/wrap"
 import Nominations from "../components/awards/nominations/wrap"
 import { useGlobalDispatchContext } from "../utilities/context"
 import IkonLogo from "../components/shared/ikon-logo"
+import { graphql } from "gatsby"
 
 const Main = styled.main`
   background: #000;
@@ -15,7 +16,7 @@ const Main = styled.main`
   z-index: 0;
 `
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const dispatch = useGlobalDispatchContext()
   const pageData = data.prismicAwardsPage.data
 
@@ -54,6 +55,8 @@ export default ({ data }) => {
     </>
   )
 }
+
+export default Page
 
 export const query = graphql`
   query AwardsPageQuery {

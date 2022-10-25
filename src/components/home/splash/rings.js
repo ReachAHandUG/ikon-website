@@ -3,7 +3,7 @@ import RotatingRing from "../../shared/rotating-ring"
 import CircularRing from "../../shared/circular-ring"
 import Box from "../../shared/rings-box"
 
-export default () => {
+const Ele = () => {
   return (
     <Box>
       <RotatingRing type="pattern-a" scale={0.9} opacity={0.2} speed={250} />
@@ -20,3 +20,5 @@ export default () => {
     </Box>
   )
 }
+
+export default Ele

@@ -84,7 +84,7 @@ const Box = styled.div`
   }
 `
 
-export default () => {
+const Ele = () => {
   return (
     <Box>
       <a
@@ -114,3 +114,5 @@ export default () => {
     </Box>
   )
 }
+
+export default Ele

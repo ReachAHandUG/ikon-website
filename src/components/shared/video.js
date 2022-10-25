@@ -22,7 +22,7 @@ const Box = styled.div`
   }
 `
 
-export default ({ poster, src, className }) => {
+const Ele = ({ poster, src, className }) => {
   const player = useRef()
   const [video, videoInView] = useInView()
 
@@ -43,3 +43,5 @@ export default ({ poster, src, className }) => {
     </Box>
   )
 }
+
+export default Ele

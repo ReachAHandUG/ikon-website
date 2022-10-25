@@ -5,6 +5,8 @@ const mint = {
   black: "#000000",
 }
 
-export default ({ children }) => {
+const Obj = ({ children }) => {
   return <ThemeProvider theme={mint}>{children}</ThemeProvider>
 }
+
+export default Obj

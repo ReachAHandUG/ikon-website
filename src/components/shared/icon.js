@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ({ title, fill }) => {
+const Ele = ({ title, fill }) => {
   return (
     <>
       {title === 'arrow-down' && (
@@ -279,3 +279,5 @@ export default ({ title, fill }) => {
     </>
   )
 }
+
+export default Ele

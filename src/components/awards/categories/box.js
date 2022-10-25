@@ -7,6 +7,10 @@ const Box = styled.section`
   position: relative;
   overflow: hidden;
 
+  &#sec-categories {
+    padding-top: 5vw;
+  }
+
   .o-glimmer {
     opacity: 0.4;
     top: -30vw;

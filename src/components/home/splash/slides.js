@@ -103,7 +103,7 @@ const Caption = styled.div`
   }
 `
 
-export default () => {
+const Ele = () => {
   const Slides = SlidesData().slides
   // const [obj, objInView] = useInView()
 
@@ -162,3 +162,5 @@ export default () => {
     </Box>
   )
 }
+
+export default Ele

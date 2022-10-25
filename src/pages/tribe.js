@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Meta from "../utilities/seo"
 import Splash from "../components/tribe/wrap"
 import { useGlobalDispatchContext } from "../utilities/context"
+import { graphql } from "gatsby"
 
 const Main = styled.main`
   background: #000;
@@ -10,7 +11,7 @@ const Main = styled.main`
   z-index: 0;
 `
 
-export default ({ data }) => {
+const Ele = ({ data }) => {
   const dispatch = useGlobalDispatchContext()
   const pageData = data.prismicTribePage.data
 
@@ -45,6 +46,8 @@ export default ({ data }) => {
     </>
   )
 }
+
+export default Ele
 
 export const query = graphql`
   query TribeQuery {

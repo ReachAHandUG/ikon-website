@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import InView from "../../shared/in-view"
-import { AwardsPageData } from "../data"
+import InView from "../shared/in-view"
+import { GuildData } from "./data"
 
 const Box = styled.div`
   position: relative;
@@ -47,17 +47,17 @@ const Wrap = styled.div`
   overflow: hidden;
 `
 
-const Ele = () => {
+const Ele = ({ caption }) => {
   return (
     <Box>
       <Wrap>
         <InView animation="fade-in">
-          <h1 className="futura-pt">Categories</h1>
+          <h1 className="futura-pt">iKON Guild</h1>
         </InView>
       </Wrap>
       <Wrap>
         <InView animation="fade-in">
-          <p>{AwardsPageData().categories_description.text}</p>
+          <p>{GuildData().description.text}</p>
         </InView>
       </Wrap>
     </Box>

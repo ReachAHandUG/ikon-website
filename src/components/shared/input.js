@@ -4,7 +4,7 @@ import Dropdown from "../../images/elements/dropdown.svg"
 import { districts } from "../../utilities/districts"
 
 const Box = styled.div`
-    padding-bottom: 2rem; 
+  padding-bottom: 2rem;
   input,
   textarea,
   select {
@@ -12,11 +12,11 @@ const Box = styled.div`
     padding: 0.75rem;
     font-weight: 500;
     width: 100%;
-    color: #fff; 
+    color: #fff;
 
     &:active,
     &:focus {
-      border-color:#b98027;
+      border-color: #b98027;
     }
   }
 
@@ -24,7 +24,7 @@ const Box = styled.div`
     font-weight: 500;
     display: block;
     font-size: 0.75rem;
-    color: #C39F63; 
+    color: #fff;
     padding-bottom: 0.75rem;
   }
 
@@ -40,21 +40,12 @@ const Box = styled.div`
 
     &:active,
     &:focus {
-      border-color:#b98027;
+      border-color: #b98027;
     }
   }
 `
 
-export default ({
-  type,
-  label,
-  name,
-  options,
-  rows,
-  change,
-  value,
-  optional,
-}) => {
+const Ele = ({ type, label, name, options, rows, change, value, optional }) => {
   let list = []
 
   switch (true) {
@@ -137,3 +128,5 @@ export default ({
     </Box>
   )
 }
+
+export default Ele

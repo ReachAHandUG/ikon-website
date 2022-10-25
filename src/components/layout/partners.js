@@ -56,7 +56,7 @@ const Box = styled.div`
   }
 `
 const Ele = () => {
-  const categories = ["Organizer", "Sponsor", "Media"]
+  const categories = ["Host", "Organizer", "Sponsor", "Media", "Main Partner"]
   const partners = PartnerData()
 
   return (
@@ -66,6 +66,10 @@ const Ele = () => {
         let title = ""
 
         switch (cat) {
+          case "Host":
+            title = "Host"
+            break
+
           case "Sponsor":
             title = "Sponsors"
             break
@@ -89,25 +93,29 @@ const Ele = () => {
         })
 
         return (
-          <Category key={index}>
-            <span className="futura-pt">{title}</span>
-            <Box key={index}>
-              {catPartners.map((partner, key) => {
-                let node = partner.node.data
-                return (
-                  <a
-                    key={key}
-                    rel="noreferrer"
-                    target="_blank"
-                    href={node.website.url}
-                    title={node.title.text}
-                  >
-                    <img src={node.logo.fluid.src} alt={node.title.text} />
-                  </a>
-                )
-              })}
-            </Box>
-          </Category>
+          <>
+            {catPartners.length > 0 && (
+              <Category key={index}>
+                <span className="futura-pt">{title}</span>
+                <Box key={index}>
+                  {catPartners.map((partner, key) => {
+                    let node = partner.node.data
+                    return (
+                      <a
+                        key={key}
+                        rel="noreferrer"
+                        target="_blank"
+                        href={node.website.url}
+                        title={node.title.text}
+                      >
+                        <img src={node.logo.fluid.src} alt={node.title.text} />
+                      </a>
+                    )
+                  })}
+                </Box>
+              </Category>
+            )}
+          </>
         )
       })}
     </Wrap>

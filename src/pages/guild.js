@@ -32,7 +32,8 @@ const Page = ({ data }) => {
 
   return (
     <>
-      <Meta
+      <Splash />
+      {/* <Meta
         title={pageData.title.text}
         image={{
           url: pageData.image.url,
@@ -42,7 +43,7 @@ const Page = ({ data }) => {
       />
       <Main>
         <GuildMembers pageData={pageData} />
-      </Main>
+      </Main> */}
     </>
   )
 }

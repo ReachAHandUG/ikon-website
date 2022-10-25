@@ -15,7 +15,7 @@ const Ele = () => {
       <ContentBox width="o-nods-contentbox">
         <Header />
         <List />
-        <div className="cta">
+        {/* <div className="cta">
           <Button
             type="box"
             to="/nomination"
@@ -28,7 +28,7 @@ const Ele = () => {
             method="external-link"
             label="Download Form"
           />
-        </div>
+        </div> */}
       </ContentBox>
       <Glimmer />
       <Outline title="nomination" />

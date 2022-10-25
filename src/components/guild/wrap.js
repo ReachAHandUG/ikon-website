@@ -12,7 +12,6 @@ const Ele = () => {
   return (
     <Box theme="column">
       <IkonLogo location="center" type="guild" />
-
       <StackedTitle
         theme="cream"
         type="guild"

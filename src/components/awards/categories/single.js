@@ -361,7 +361,7 @@ const Ele = () => {
         <InView className="fade-in-left" delay="20">
           <h2 className="futura-pt">{category ? category.title : ""}</h2>
           <p>{category ? category.description : ""}</p>
-          <div className="cta-box">
+          {/* <div className="cta-box">
             <Button
               type="box"
               to="/nomination"
@@ -374,7 +374,7 @@ const Ele = () => {
               method="external-link"
               label="Download Form"
             />
-          </div>
+          </div> */}
           {category && category.explainer !== null && (
             <EmbedWrap>
               <Embed url={category.explainer} />

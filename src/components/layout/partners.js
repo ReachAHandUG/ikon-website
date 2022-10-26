@@ -63,27 +63,10 @@ const Ele = () => {
     <Wrap>
       {categories.map((cat, index) => {
         let catPartners = []
-        let title = ""
+        let title = cat
 
-        switch (cat) {
-          case "Host":
-            title = "Host"
-            break
-
-          case "Sponsor":
-            title = "Sponsors"
-            break
-
-          case "Organizer":
-            title = "Main Partners"
-            break
-
-          case "Media":
-            title = "Media"
-            break
-
-          default:
-            break
+        if (cat == "Main Partner") {
+          title = "Main Partners"
         }
 
         partners.forEach((item, id) => {

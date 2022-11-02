@@ -139,7 +139,7 @@ const Ele = () => {
             <span className="futura-pt section-title">Address</span>
             <p>
               Plot 7502, Block 244, Heritage Village, Kansanga, Gabba Road,
-              Kampala, Uganda
+              Kampala, Uganda.
             </p>
           </div>
         </section>

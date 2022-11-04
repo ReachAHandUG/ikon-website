@@ -132,14 +132,14 @@ const Ele = () => {
 
           <div>
             <span className="futura-pt section-title">Email</span>
-            <p>ikon@sautiplus.org</p>
+            <p> info@theikon.org</p>
           </div>
 
           <div>
             <span className="futura-pt section-title">Address</span>
             <p>
               Plot 7502, Block 244, Heritage Village, Kansanga, Gabba Road,
-              Kampala, Uganda.
+              Kampala, Uganda
             </p>
           </div>
         </section>

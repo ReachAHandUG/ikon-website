@@ -27,7 +27,7 @@ const Ele = ({ children }) => {
         <SideMenu />
         <MenuToggle />
         <Category />
-        <RahuLogo />
+        {/* <RahuLogo /> */}
         <Socials />
         <Footer />
         <Preloader />

@@ -119,8 +119,7 @@ const Ele = () => {
             <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
           <p>
-            {new Date().getFullYear()} Reach A Hand Uganda. All Rights
-            Reservered
+            {new Date().getFullYear()} Reach A Hand Uganda. All Rights reserved
           </p>
         </section>
 

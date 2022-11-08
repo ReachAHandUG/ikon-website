@@ -119,8 +119,7 @@ const Ele = () => {
             <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
           <p>
-            {new Date().getFullYear()} Reach A Hand Uganda. All Rights
-            Reservered
+            {new Date().getFullYear()} Reach A Hand Uganda. All Rights reserved
           </p>
         </section>
 
@@ -155,14 +154,14 @@ const Ele = () => {
               Facebook
             </a>
             <a
-              href="https://twitter.com/ikonawards?t=aXCrXdrTekK0OX-yWKYbfw&s=09"
+              href="https://twitter.com/ikonawards"
               rel="noreferrer"
               target="_blank"
             >
               Twitter
             </a>
             <a
-              href="https://www.instagram.com/invites/contact/?i=mstd7z9yz1ru&utm_content=lc6k9op"
+              href="https://www.instagram.com/ikonawards/"
               rel="noreferrer"
               target="_blank"
             >

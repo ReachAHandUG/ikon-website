@@ -263,7 +263,6 @@ const Ele = () => {
   //set awards list
   const [awardsList, setAwardsList] = useState([])
   useEffect(() => {
-    console.log("rendering")
     if (awards.length) {
       setAwardsList(awards)
     }
@@ -271,10 +270,14 @@ const Ele = () => {
 
   const dispatch = useGlobalDispatchContext()
 
-  const setSelectedAward = index => {
+  const setSelectedAward = (categoryIndex, awardIndex) => {
+    let award = awardsByCategory[categoryIndex].list[awardIndex]
+    console.log(award)
+    debugger
+
     dispatch({
       type: "SET_SELECTED_AWARD",
-      value: awardsList[index],
+      value: award,
     })
   }
 
@@ -282,9 +285,9 @@ const Ele = () => {
     <>
       <Box>
         {awards &&
-          awardsByCategory.map((category, key) => {
+          awardsByCategory.map((category, categoryIndex) => {
             return (
-              <Section key={key}>
+              <Section key={categoryIndex}>
                 <div className="title">
                   <StackedTitle theme="cream" first={category.title} />
                   <PatternStrip />
@@ -292,11 +295,11 @@ const Ele = () => {
 
                 {category.list.length && (
                   <Items>
-                    {category.list.map((item, index) => (
+                    {category.list.map((item, awardIndex) => (
                       <Geo
-                        key={index}
+                        key={awardIndex}
                         onClick={() => {
-                          setSelectedAward(index)
+                          setSelectedAward(categoryIndex, awardIndex)
                         }}
                       >
                         <Card>

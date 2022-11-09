@@ -13,9 +13,9 @@ const Wrap = styled.div`
 const Category = styled.div`
   padding-bottom: 4.5rem;
 
-  &:last-child {
+  /* &:last-child {
     padding-bottom: 0;
-  }
+  } */
 
   > span {
     display: block;
@@ -76,7 +76,7 @@ const Ele = () => {
         })
 
         return (
-          <>
+          <div key={index}>
             {catPartners.length > 0 && (
               <Category key={index}>
                 <span className="futura-pt">{title}</span>
@@ -98,7 +98,7 @@ const Ele = () => {
                 </Box>
               </Category>
             )}
-          </>
+          </div>
         )
       })}
     </Wrap>

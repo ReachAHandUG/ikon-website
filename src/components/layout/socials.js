@@ -98,7 +98,7 @@ const Ele = () => {
       <a
         rel="noreferrer"
         target="_blank"
-        href="https://twitter.com/AfrikaIkons"
+        href="https://twitter.com/ikonawards?t=2Ooc4lkCpIEAEhvstnmeIA&s=09"
         className="tw"
       >
         <Icon title="twitter" />
@@ -106,7 +106,7 @@ const Ele = () => {
       <a
         rel="noreferrer"
         target="_blank"
-        href="https://www.instagram.com/afrikaikons/"
+        href="https://www.instagram.com/invites/contact/?i=iutzfjjg8238&utm_content=lc6k9op"
         className="ig"
       >
         <Icon title="ig" />

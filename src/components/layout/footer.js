@@ -154,14 +154,14 @@ const Ele = () => {
               Facebook
             </a>
             <a
-              href="https://twitter.com/ikonawards"
+              href="https://twitter.com/ikonawards?t=2Ooc4lkCpIEAEhvstnmeIA&s=09"
               rel="noreferrer"
               target="_blank"
             >
               Twitter
             </a>
             <a
-              href="https://www.instagram.com/ikonawards/"
+              href="https://www.instagram.com/invites/contact/?i=iutzfjjg8238&utm_content=lc6k9op"
               rel="noreferrer"
               target="_blank"
             >

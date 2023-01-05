@@ -8,7 +8,6 @@
   gtag('config', 'G-9QCCDWH78V');
 </script>
 
-
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Meta from "../utilities/seo"

@@ -162,17 +162,14 @@ const Ele = () => {
             </div>
           </Link>
         </li>
-////////////////////////////////////////
- <li>
-          <Link activeClassName="is-active" to="https://fellowship.theikon.org/team/" className="futura-pt">
+        <li>
+          <a href="https://fellowship.theikon.org/team/" className="futura-pt">
             <span>Team</span>
             <div>
               <Icon title="pattern-b"></Icon>
             </div>
-          </Link>
+          </a>
         </li>
-
-////////////////////////////////////
         <li>
           <Link activeClassName="is-active" to="/tribe" className="futura-pt">
             <span>Tribe</span>

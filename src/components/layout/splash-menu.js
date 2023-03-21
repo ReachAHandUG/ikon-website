@@ -73,7 +73,7 @@ const Ele = () => {
         <Link activeClassName="is-active" to="/awards" className="futura-pt">
           Awards
         </Link>
-        <Link activeClassName="is-active" to="/guild" className="futura-pt">
+        <Link activeClassName="is-active" to="/" className="futura-pt">
           WINNERS
         </Link>
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">

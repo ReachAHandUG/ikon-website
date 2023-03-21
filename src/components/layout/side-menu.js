@@ -156,7 +156,7 @@ const Ele = () => {
         </li>
         <li>
           <Link activeClassName="is-active" to="/guild" className="futura-pt">
-            <span>Guild</span>
+            <span>Winners2023</span>
             <div>
               <Icon title="pattern-b"></Icon>
             </div>

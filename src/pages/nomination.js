@@ -387,7 +387,7 @@ const Ele = ({ data }) => {
     <>
       <Main
         title="Nomination"
-        caption="The iKon guild is now taking applications for the 2022 iKon Awards.
+        caption="The iKon nominations are currently closed for the 2023 iKon Awards.
             The award categories recognize the accomplishments of innovators and
             people in Uganda as well the contributions of persons whose life or
             character support and influence the current generation of Ugandans."

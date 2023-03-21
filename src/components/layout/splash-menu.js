@@ -74,7 +74,7 @@ const Ele = () => {
           Awards
         </Link>
         <Link activeClassName="is-active" to="/guild" className="futura-pt">
-          WINNERS2023
+          WINNERS
         </Link>
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">
           Tribe

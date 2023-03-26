@@ -155,12 +155,17 @@ const Ele = () => {
           </Link>
         </li>
         <li>
-          <Link activeClassName="is-active" to="/guild" className="futura-pt">
-            <span>Winners2023</span>
+           <a
+            href="https://fellowship.theikon.org/winners2023/"
+            target="_blank"
+            className="futura-pt"
+            rel="noreferrer"
+          >
+            <span>WINNERS2023</span>
             <div>
-              <Icon title="pattern-b"></Icon>
+              <Icon title="pattern-c"></Icon>
             </div>
-          </Link>
+          </a>
         </li>
         <li>
           <a href="https://fellowship.theikon.org/team/" className="futura-pt">

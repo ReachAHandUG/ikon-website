@@ -76,7 +76,7 @@ const Ele = () => {
         //<Link activeClassName="is-active" to="/" className="futura-pt">
          // WINNERS
 
- <a
+       <a
           href="https://fellowship.theikon.org/winners2023/"
           target="_blank"
           className="futura-pt"
@@ -84,7 +84,7 @@ const Ele = () => {
         >
           WINNERS
         </a>
-        </Link>
+       // </Link>
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">
           Tribe
         </Link>

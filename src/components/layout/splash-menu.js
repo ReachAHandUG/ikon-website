@@ -78,11 +78,6 @@ const Ele = () => {
         </Link>
 
     
-        <!--<Link activeClassName="is-active" to="/tribe" className="futura-pt">
-          Tribe
-        </Link>-->
-       
-    
     <a
           href="https://fellowship.theikon.org"
           target="_blank"

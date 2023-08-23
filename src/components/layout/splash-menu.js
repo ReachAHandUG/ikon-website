@@ -78,9 +78,9 @@ const Ele = () => {
         </Link>
 
     
-        //<Link activeClassName="is-active" to="/tribe" className="futura-pt">
-          //Tribe
-       // </Link>
+        <!--<Link activeClassName="is-active" to="/tribe" className="futura-pt">
+          Tribe
+        </Link>-->
        
     
     <a

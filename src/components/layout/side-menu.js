@@ -196,6 +196,20 @@ const Ele = () => {
             </div>
           </a>
         </li>
+
+   <li>
+          <a
+            href="https://fellowship.theikon.org/ikonawards2023/"
+            target="_blank"
+            className="futura-pt"
+            rel="noreferrer"
+          >
+            <span>ikona Awards2023</span>
+            <div>
+              <Icon title="pattern-c"></Icon>
+            </div>
+          </a>
+        </li>
         {/* <li>
                     <Link to="/" className="futura-pt">
                         <span>Media</span>

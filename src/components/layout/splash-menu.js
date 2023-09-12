@@ -99,7 +99,7 @@ const Ele = () => {
           className="futura-pt"
           rel="noreferrer"
         >
-          Fellowship
+          ikonAwards2023
         </a>
       </Wrap>
     </Box>

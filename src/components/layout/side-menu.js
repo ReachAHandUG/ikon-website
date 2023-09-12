@@ -204,7 +204,7 @@ const Ele = () => {
             className="futura-pt"
             rel="noreferrer"
           >
-            <span>ikona Awards2023</span>
+            <span>ikonAwards2023</span>
             <div>
               <Icon title="pattern-c"></Icon>
             </div>

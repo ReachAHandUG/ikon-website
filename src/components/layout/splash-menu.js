@@ -93,6 +93,14 @@ const Ele = () => {
         >
           Fellowship
         </a>
+            <a
+          href="https://fellowship.theikon.org/ikonawards2023/"
+          target="_blank"
+          className="futura-pt"
+          rel="noreferrer"
+        >
+          Fellowship
+        </a>
       </Wrap>
     </Box>
   )

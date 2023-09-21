@@ -387,7 +387,7 @@ const Ele = ({ data }) => {
     <>
       <Main
         title="Nomination"
-        caption="The iKon nominations are currently closed for the 2023 iKon Awards.
+        caption="The iKon nominations are open for the 2024 iKon Awards.
             The award categories recognize the accomplishments of innovators and
             people in Uganda as well the contributions of persons whose life or
             character support and influence the current generation of Ugandans."
@@ -470,7 +470,7 @@ const Ele = ({ data }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://drive.google.com/file/d/1KGvd4FWHIqbRSkhh2otEiRd0QCtMi2F8/view"
+                href="https://filmfreeway.com/TheIkonAwards"
               >
                 submission terms & conditions
               </a>{" "}

@@ -11,6 +11,19 @@ const Box = styled.div`
   z-index: 1;
 `
 
+const CtaBtn = styled.div`
+  margin-top: 2rem;
+  a {
+    display: inline-block;
+    background-color: #b88028;
+    padding: 1rem 2rem !important;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+  }
+`
+
 const Nav = styled.div`
   position: absolute;
   z-index: 1;
@@ -141,6 +154,16 @@ const Ele = () => {
         <Caption>
           <div>
             <p>{SlidesData().intro.text}</p>
+            <CtaBtn>
+              <a
+                href="https://filmfreeway.com/TheIkonAwards"
+                target="_blank"
+                rel="noreferrer"
+                title="Submit my Film"
+              >
+                Submit My Film
+              </a>
+            </CtaBtn>
             <a href="#about" className="futura-pt">
               Scroll down
             </a>

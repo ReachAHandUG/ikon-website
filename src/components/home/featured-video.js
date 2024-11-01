@@ -76,7 +76,7 @@ const Ele = () => {
         <Box>
             <Wrap>
                 <Video>
-                    <iframe width="560" height="315" src={'https://www.youtube-nocookie.com/embed/' + videoID + '?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1'} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe width="560" height="315" src={'https://www.youtube.com/watch?v=luOIpkj21w4' + videoID + '?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1'} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Video>
             </Wrap>
             <Strip />

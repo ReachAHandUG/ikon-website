@@ -27,43 +27,63 @@ const Box = styled.div`
     transform: translate3d(110%, 0, 0);
   }
 
-/* Initially hide the pull-down menu */
-.pullDown {
-    display: none;  /* Hidden by default */
-    position: relative;  /* Position it properly below the menu item */
-    list-style-type: none;  /* Remove bullets from the list */
-    margin: 0;  /* Remove default margin */
-    padding: 0;  /* Remove default padding */
-    z-index: 1000;  /* Make sure it stays on top */
-}
-
-.pullDown li a:hover {
-    color: #007BFF;  /* Change color on hover */
-}
-
-/* Hover effect on the menu item (trigger to display the dropdown) */
-.menu-item:hover .pullDown {
-    display: block;  /* Show the pull-down menu when hovering */
-}
-
 .menu-item {
   list-style-type: none;
-  display: flex; /* Align the child elements in a row */
-  align-items: center; /* Vertically align the text and the icon */
+  position: relative; /* Allows absolute positioning of the pullDown */
 }
 
 .menu-item a {
-  display: flex; /* Make <a> a flex container */
-  align-items: center; /* Center items vertically inside the <a> */
+  display: flex;
+  align-items: center;
 }
 
 .hoverContent {
-  margin-right: 8px; /* Add space between text and logo */
+  margin-right: 8px;
+  cursor: pointer;
 }
 
-.menu-item a .hoverContent {
-    cursor: pointer;  /* Show pointer cursor on hover */
+.logo-container {
+  display: inline-block;
 }
+
+/* Initially hide the dropdown list */
+.pullDown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the dropdown below the parent */
+  left: 0;
+  width: 100%; /* You can adjust the width as needed */
+  background-color: #fff; /* Set the background color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: for a dropdown shadow effect */
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.pullDown li {
+  padding: 8px 16px;
+}
+
+.pullDown li a {
+  display: block;
+}
+
+/* Hover effect: display the dropdown menu */
+.menu-item:hover .pullDown {
+  display: block;
+}
+
+/* Optionally: if you want the list to appear both above and below, 
+   you can use `top` and `bottom` positions depending on the space */
+.menu-item:hover .pullDown {
+  top: 100%; /* By default, it will appear below the parent */
+}
+
+/* For list items appearing above and below (in case of overflow or desired layout) */
+.menu-item:hover .pullDown.reverse {
+  top: auto; /* Reset top positioning */
+  bottom: 100%; /* Position it above the parent */
+}
+
 
   a {
     padding: 0.877vw 0;
@@ -193,18 +213,19 @@ const Ele = () => {
             </div>
           </Link>
         </li>
-        <li class="menu-item">
-          <a class="futura-pt">
-            <span class="hoverContent">iKON WINNERS</span>
-               <div class="logo-container">
-                 <Icon title="pattern-b"></Icon>
-                </div>
-             <ul class="pullDown">
-              <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
-              <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
-             </ul>
-          </a>
-         </li>
+<li class="menu-item">
+  <a class="futura-pt">
+    <span class="hoverContent">iKON WINNERS</span>
+    <div class="logo-container">
+      <Icon title="pattern-b"></Icon>
+    </div>
+
+    <ul class="pullDown">
+      <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
+      <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+    </ul>
+  </a>
+</li>
 
 
         <li>

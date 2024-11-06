@@ -46,10 +46,19 @@ const Box = styled.div`
     display: block;  /* Show the pull-down menu when hovering */
 }
 
-/* Style for the main link (iKON WINNERS) */
+.menu-item {
+  list-style-type: none;
+  display: flex; /* Align the child elements in a row */
+  align-items: center; /* Vertically align the text and the icon */
+}
+
 .menu-item a {
-    position: relative;  /* So the pull-down can be positioned relative to this */
-    display: inline-block;  /* Allow for inline/block display */
+  display: flex; /* Make <a> a flex container */
+  align-items: center; /* Center items vertically inside the <a> */
+}
+
+.hoverContent {
+  margin-right: 8px; /* Add space between text and logo */
 }
 
 .menu-item a .hoverContent {
@@ -184,18 +193,19 @@ const Ele = () => {
             </div>
           </Link>
         </li>
-<li class="menu-item">
-    <a class="futura-pt">
-        <span class="hoverContent">iKON WINNERS        <div>
-            <Icon title="pattern-b"></Icon>
-        </div></span>
+        <li class="menu-item">
+          <a class="futura-pt">
+            <span class="hoverContent">iKON WINNERS</span>
+               <div class="logo-container">
+                 <Icon title="pattern-b"></Icon>
+                </div>
+             <ul class="pullDown">
+              <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
+              <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+             </ul>
+          </a>
+         </li>
 
-        <ul class="pullDown">
-            <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
-            <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
-        </ul>
-    </a>
-</li>
 
         <li>
           <a href="https://fellowship.theikon.org/team/" className="futura-pt">

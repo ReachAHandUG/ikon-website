@@ -193,13 +193,13 @@ const Ele = () => {
 <li class="menu-item">
     <a class="futura-pt">
         <span class="hoverContent">iKON WINNERS</span>
+        <div>
+            <Icon title="pattern-b"></Icon>
+        </div>
         <ul class="pullDown">
             <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
             <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
         </ul>
-        <div>
-            <Icon title="pattern-b"></Icon>
-        </div>
     </a>
 </li>
 

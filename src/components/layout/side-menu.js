@@ -37,9 +37,6 @@ const Box = styled.div`
     z-index: 1000;  /* Make sure it stays on top */
 }
 
-
-
-
 .pullDown li a:hover {
     color: #007BFF;  /* Change color on hover */
 }
@@ -58,9 +55,6 @@ const Box = styled.div`
 .menu-item a .hoverContent {
     cursor: pointer;  /* Show pointer cursor on hover */
 }
-
-
-
 
   a {
     padding: 0.877vw 0;
@@ -193,7 +187,6 @@ const Ele = () => {
 <li class="menu-item">
     <a class="futura-pt">
         <span class="hoverContent">iKON WINNERS</span>
-    <!--An icon-->
         <div>
             <Icon title="pattern-b"></Icon>
         </div>

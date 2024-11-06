@@ -72,8 +72,6 @@ const Box = styled.div`
   display: block;
 }
 
-/* Optionally: if you want the list to appear both above and below, 
-   you can use `top` and `bottom` positions depending on the space */
 .menu-item:hover .pullDown {
   top: 100%; /* By default, it will appear below the parent */
 }

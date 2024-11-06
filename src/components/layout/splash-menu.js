@@ -19,7 +19,38 @@ const Box = styled.nav`
   @media screen and (max-width: 766px) {
     display: none;
   }
-`
+`/* Initially hide the pull-down menu */
+.pullDown {
+    display: none;  /* Hidden by default */
+    position: relative;  /* Position it properly below the menu item */
+    list-style-type: none;  /* Remove bullets from the list */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    z-index: 1000;  /* Make sure it stays on top */
+}
+
+
+
+
+.pullDown li a:hover {
+    color: #007BFF;  /* Change color on hover */
+}
+
+/* Hover effect on the menu item (trigger to display the dropdown) */
+.menu-item:hover .pullDown {
+    display: block;  /* Show the pull-down menu when hovering */
+}
+
+/* Style for the main link (iKON WINNERS) */
+.menu-item a {
+    position: relative;  /* So the pull-down can be positioned relative to this */
+    display: inline-block;  /* Allow for inline/block display */
+}
+
+.menu-item a .hoverContent {
+    cursor: pointer;  /* Show pointer cursor on hover */
+}
+
 
 const Logo = styled.div`
   a {
@@ -73,14 +104,18 @@ const Ele = () => {
         <Link activeClassName="is-active" to="/awards" className="futura-pt">
           Awards
         </Link>
-       <a
-          href="https://fellowship.theikon.org/winners2023"
-          target="_blank"
-          className="futura-pt"
-          rel="noreferrer"
-        >
-          WINNERS
-        </a>
+      
+    <a class="futura-pt">
+        <span class="hoverContent">WINNERS</span>
+        <ul class="pullDown">
+            <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
+            <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+        </ul>
+        <div>
+            <Icon title="pattern-b"></Icon>
+        </div>
+    </a>
+
        
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">
           Tribe

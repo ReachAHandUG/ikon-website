@@ -65,11 +65,12 @@ const Logo = styled.div`
     }
   }
 
+  /* Make the Logo hidden when inside a .page container */
   .page & {
     opacity: 0;
     visibility: hidden;
   }
-`
+`;
 
 const Wrap = styled.div`
   a {

@@ -155,7 +155,7 @@ const Ele = () => {
           </Link>
         </li>
         <li>
-           <div>
+           <div className="futura-pt">
               IKON WINNERS
             <select>
                <option><a href="https://fellowship.theikon.org/winners2023/"  target="_blank" className="futura-pt" rel="noreferrer">WINNERS2023</a></option>

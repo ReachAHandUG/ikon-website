@@ -193,6 +193,7 @@ const Ele = () => {
 <li class="menu-item">
     <a class="futura-pt">
         <span class="hoverContent">iKON WINNERS</span>
+    <!--An icon-->
         <div>
             <Icon title="pattern-b"></Icon>
         </div>

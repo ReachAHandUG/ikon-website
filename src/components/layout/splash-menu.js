@@ -50,7 +50,7 @@ const Box = styled.nav`
 
 
 const Logo = styled.div`
-  a {
+a {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
@@ -61,7 +61,6 @@ const Logo = styled.div`
     }
   }
 
-  /* Make the Logo hidden when inside a .page container */
   .page & {
     opacity: 0;
     visibility: hidden;

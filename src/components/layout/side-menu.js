@@ -155,17 +155,16 @@ const Ele = () => {
           </Link>
         </li>
         <li>
-           <a
-            href="https://fellowship.theikon.org/winners2023/"
-            target="_blank"
-            className="futura-pt"
-            rel="noreferrer"
-          >
-            <span>WINNERS2023</span>
+           <div>
+              IKON WINNERS
+            <select>
+               <option><a href="https://fellowship.theikon.org/winners2023/"  target="_blank" className="futura-pt" rel="noreferrer">WINNERS2023</a></option>
+               <option><a href="https://fellowship.theikon.org/winners2024/"  target="_blank" className="futura-pt" rel="noreferrer">WINNERS2024</a></option>
+            </select>
             <div>
               <Icon title="pattern-c"></Icon>
             </div>
-          </a>
+          </div>
         </li>
         <li>
           <a href="https://fellowship.theikon.org/team/" className="futura-pt">

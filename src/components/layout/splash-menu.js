@@ -49,7 +49,7 @@ ul.pullDown li a {
 
 .hoverContent:hover .pullDown{
 background-color:white;
-color:black;
+color:yellow;
 }
 
 ul.pullDown li a:hover {

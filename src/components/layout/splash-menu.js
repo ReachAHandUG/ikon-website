@@ -44,7 +44,12 @@ ul.pullDown li a {
   display: block;
   padding: 8px 15px; /* Adjust padding as needed */
   text-decoration: none;
-  color: white;
+  color: black;
+}
+
+.hoverContent:hover .pullDown{
+background-color:white;
+color:black;
 }
 
 ul.pullDown li a:hover {

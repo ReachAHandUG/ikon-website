@@ -37,10 +37,7 @@ const Box = styled.div`
     z-index: 1000;  /* Make sure it stays on top */
 }
 
-/* Style for individual list items */
-.pullDown li {
-    padding: 4px 8px;  /* Add padding to the items */
-}
+
 
 
 .pullDown li a:hover {

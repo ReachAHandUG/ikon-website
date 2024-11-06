@@ -30,7 +30,7 @@ ul.pullDown {
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position it relative to the anchor element */
   top: 100%; /* Position it directly below the parent */
-  left: 0;
+  inset: 0;
   margin: 0;
   padding: 0;
   
@@ -44,7 +44,7 @@ ul.pullDown li a {
   display: block;
   padding: 8px 15px; /* Adjust padding as needed */
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 ul.pullDown li a:hover {

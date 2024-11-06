@@ -26,6 +26,18 @@ const Box = styled.div`
     transform: translate3d(110%, 0, 0);
   }
 
+.pullDown{
+    display: none;
+ }
+
+ .hoverContent:hover .pullDown{
+    display: block;
+    transition: all 0.3s ease;
+    
+ }
+
+
+
   a {
     padding: 0.877vw 0;
     padding-right: 2vw;

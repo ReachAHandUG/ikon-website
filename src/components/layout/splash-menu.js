@@ -19,7 +19,8 @@ const Box = styled.nav`
   @media screen and (max-width: 766px) {
     display: none;
   }
-`/* Initially hide the pull-down menu */
+  
+/* Initially hide the pull-down menu */
 .pullDown {
     display: none;  /* Hidden by default */
     position: relative;  /* Position it properly below the menu item */

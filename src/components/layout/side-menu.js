@@ -194,7 +194,7 @@ const Ele = () => {
           </Link>
         </li>
 <li class="menu-item">
-    <a href="https://fellowship.theikon.org/team/" class="futura-pt">
+    <a class="futura-pt">
         <span class="hoverContent">iKON WINNERS</span>
         <ul class="pullDown">
             <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>

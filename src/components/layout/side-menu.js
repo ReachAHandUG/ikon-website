@@ -49,12 +49,10 @@ const Box = styled.div`
 /* Initially hide the dropdown list */
 .pullDown {
   display: none;
-  position: absolute;
+  position: relative;
   top: 100%; /* Position the dropdown below the parent */
   left: 0;
   width: 100%; /* You can adjust the width as needed */
-  background-color: #fff; /* Set the background color */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: for a dropdown shadow effect */
   padding: 10px 0;
   list-style-type: none;
 }

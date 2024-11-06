@@ -34,22 +34,14 @@ const Box = styled.div`
     list-style-type: none;  /* Remove bullets from the list */
     margin: 0;  /* Remove default margin */
     padding: 0;  /* Remove default padding */
-    background-color: #fff;  /* Set background color */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Add a shadow for a dropdown effect */
     z-index: 1000;  /* Make sure it stays on top */
 }
 
 /* Style for individual list items */
 .pullDown li {
-    padding: 8px 16px;  /* Add padding to the items */
+    padding: 4px 8px;  /* Add padding to the items */
 }
 
-/* Style for links inside the pull-down */
-.pullDown li a {
-    color: #333;  /* Default color */
-    text-decoration: none;  /* Remove underline */
-    font-family: 'Futura PT', sans-serif;
-}
 
 .pullDown li a:hover {
     color: #007BFF;  /* Change color on hover */

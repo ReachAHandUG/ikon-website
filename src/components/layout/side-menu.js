@@ -30,7 +30,7 @@ const Box = styled.div`
 /* Initially hide the pull-down menu */
 .pullDown {
     display: none;  /* Hidden by default */
-    position: absolute;  /* Position it properly below the menu item */
+    position: relative;  /* Position it properly below the menu item */
     list-style-type: none;  /* Remove bullets from the list */
     margin: 0;  /* Remove default margin */
     padding: 0;  /* Remove default padding */

@@ -7,6 +7,7 @@ import {
   useGlobalStateContext,
 } from "../../utilities/context"
 
+
 const Box = styled.div`
   position: fixed;
   display: flex;

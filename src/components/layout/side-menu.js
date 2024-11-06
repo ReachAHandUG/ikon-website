@@ -26,15 +26,49 @@ const Box = styled.div`
     transform: translate3d(110%, 0, 0);
   }
 
-.pullDown{
-    display: none;
- }
+/* Initially hide the pull-down menu */
+.pullDown {
+    display: none;  /* Hidden by default */
+    position: absolute;  /* Position it properly below the menu item */
+    list-style-type: none;  /* Remove bullets from the list */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    background-color: #fff;  /* Set background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Add a shadow for a dropdown effect */
+    z-index: 1000;  /* Make sure it stays on top */
+}
 
- .hoverContent:hover .pullDown{
-    display: block;
-    transition: all 0.3s ease;
-    
- }
+/* Style for individual list items */
+.pullDown li {
+    padding: 8px 16px;  /* Add padding to the items */
+}
+
+/* Style for links inside the pull-down */
+.pullDown li a {
+    color: #333;  /* Default color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Futura PT', sans-serif;
+}
+
+.pullDown li a:hover {
+    color: #007BFF;  /* Change color on hover */
+}
+
+/* Hover effect on the menu item (trigger to display the dropdown) */
+.menu-item:hover .pullDown {
+    display: block;  /* Show the pull-down menu when hovering */
+}
+
+/* Style for the main link (iKON WINNERS) */
+.menu-item a {
+    position: relative;  /* So the pull-down can be positioned relative to this */
+    display: inline-block;  /* Allow for inline/block display */
+}
+
+.menu-item a .hoverContent {
+    cursor: pointer;  /* Show pointer cursor on hover */
+}
+
 
 
 
@@ -166,18 +200,19 @@ const Ele = () => {
             </div>
           </Link>
         </li>
-        <li>
-          <a href="https://fellowship.theikon.org/team/" className="futura-pt">
-            <span class="hoverContent">iKON WINNERS</span>
-               <ul class="pullDown">
-                    <li><a href="https://fellowship.theikon.org/winners2023/" className="futura-pt">WINNERS2023</a></li>
-                    <li><a href="https://fellowship.theikon.org/winners2024/" className="futura-pt">WINNERS2024</a></li>
-                </ul>
-            <div>
-              <Icon title="pattern-b"></Icon>
-            </div>
-          </a>
-        </li>
+<li class="menu-item">
+    <a href="https://fellowship.theikon.org/team/" class="futura-pt">
+        <span class="hoverContent">iKON WINNERS</span>
+        <ul class="pullDown">
+            <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
+            <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+        </ul>
+        <div>
+            <Icon title="pattern-b"></Icon>
+        </div>
+    </a>
+</li>
+
         <li>
           <a href="https://fellowship.theikon.org/team/" className="futura-pt">
             <span>Team</span>

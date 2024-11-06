@@ -29,10 +29,6 @@ const Box = styled.nav`
     padding: 0;  /* Remove default padding */
     z-index: 1000;  /* Make sure it stays on top */
 }
-
-
-
-
 .pullDown li a:hover {
     color: #007BFF;  /* Change color on hover */
 }
@@ -47,10 +43,10 @@ const Box = styled.nav`
     position: relative;  /* So the pull-down can be positioned relative to this */
     display: inline-block;  /* Allow for inline/block display */
 }
-
 .menu-item a .hoverContent {
     cursor: pointer;  /* Show pointer cursor on hover */
 }
+`;
 
 
 const Logo = styled.div`

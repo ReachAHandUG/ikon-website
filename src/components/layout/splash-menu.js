@@ -31,11 +31,9 @@ ul.pullDown {
   position: absolute; /* Position it relative to the anchor element */
   top: 100%; /* Position it directly below the parent */
   left: 0;
-  background-color: #fff; /* Make sure the background is visible */
-  list-style-type: none;
   margin: 0;
   padding: 0;
-  border: 1px solid #ccc; /* Optional, for border styling */
+  
 }
 
 a.futura-pt:hover ul.pullDown {

@@ -30,7 +30,7 @@ ul.pullDown {
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position it relative to the anchor element */
   top: 100%; /* Position it directly below the parent */
-  inset: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   

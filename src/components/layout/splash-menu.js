@@ -20,32 +20,39 @@ z-index: 100;
 display: none;
 }
 
-/* Initially hide the pull-down menu */
-.pullDown {
-display: none; /* Hidden by default */
-position: relative; /* Position it properly below the menu item */
-list-style-type: none; /* Remove bullets from the list */
-margin: 0; /* Remove default margin */
-padding: 0; /* Remove default padding */
-z-index: 1000; /* Make sure it stays on top */
-}
-.pullDown li a:hover {
-color: #007BFF; /* Change color on hover */
+/* Style for the anchor and dropdown */
+a.futura-pt {
+  position: relative; /* This allows positioning of the dropdown relative to the parent */
+  display: inline-block; /* Allows for block behavior with inline positioning */
 }
 
-/* Hover effect on the menu item (trigger to display the dropdown) */
-.menu-item:hover .pullDown {
-display: block; /* Show the pull-down menu when hovering */
+ul.pullDown {
+  display: none; /* Hide the dropdown by default */
+  position: absolute; /* Position it relative to the anchor element */
+  top: 100%; /* Position it directly below the parent */
+  left: 0;
+  background-color: #fff; /* Make sure the background is visible */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc; /* Optional, for border styling */
 }
 
-/* Style for the main link (iKON WINNERS) */
-.menu-item a {
-position: relative; /* So the pull-down can be positioned relative to this */
-display: inline-block; /* Allow for inline/block display */
+a.futura-pt:hover ul.pullDown {
+  display: block; /* Show the dropdown when the parent is hovered */
 }
-.menu-item a .hoverContent {
-cursor: pointer; /* Show pointer cursor on hover */
+
+ul.pullDown li a {
+  display: block;
+  padding: 8px 15px; /* Adjust padding as needed */
+  text-decoration: none;
+  color: black;
 }
+
+ul.pullDown li a:hover {
+  background-color: #f0f0f0; /* Optional, to highlight the items on hover */
+}
+
 `;
 
 
@@ -102,13 +109,14 @@ return (
         Awards
         </Link>
 
-        <a class="futura-pt">
-            <span class="hoverContent">WINNERS</span>
-            <ul class="pullDown">
-                <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
-                <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
-            </ul>
-        </a>
+       <a class="futura-pt">
+    <span class="hoverContent">WINNERS</span>
+    <ul class="pullDown">
+        <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
+        <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+    </ul>
+</a>
+
 
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">
         Tribe

@@ -171,7 +171,7 @@ const Ele = () => {
             <span class="hoverContent">iKON WINNERS</span>
                <ul class="pullDown">
                     <li><a href="https://fellowship.theikon.org/winners2023/" className="futura-pt">WINNERS2023</a></li>
-                    <li><a href="https://fellowship.theikon.org/winners2024/" className="futura-pt">WINNERS2023</a></li>
+                    <li><a href="https://fellowship.theikon.org/winners2024/" className="futura-pt">WINNERS2024</a></li>
                 </ul>
             <div>
               <Icon title="pattern-b"></Icon>

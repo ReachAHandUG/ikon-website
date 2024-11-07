@@ -30,7 +30,7 @@ ul.pullDown {
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position it relative to the anchor element */
   top: 100%; /* Position it directly below the parent */
-  left: 0;
+  left: 1px;
   margin: 0;
   padding: 0;
   
@@ -43,7 +43,7 @@ a.futura-pt:hover ul.pullDown {
 
 ul.pullDown li a {
   display: block;
-  padding: 8px 2px; /* Adjust padding as needed */
+  padding: 8px 15px; /* Adjust padding as needed */
   text-decoration: none;
   color: black;
 }

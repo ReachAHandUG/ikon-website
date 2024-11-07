@@ -33,12 +33,18 @@ ul.pullDown {
   left: 1px;
   margin: 0;
   padding: 0;
-  
+  list-style: none; /* Ensure there's no default list styling */
 }
 
 a.futura-pt:hover ul.pullDown {
   display: block; /* Show the dropdown when the parent is hovered */
   background-color: #f0f0f0;
+}
+
+ul.pullDown li {
+  display: block; /* Make sure list items behave like block elements */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
 ul.pullDown li a {
@@ -47,6 +53,7 @@ ul.pullDown li a {
   text-decoration: none;
   color: black;
 }
+
 
 
 

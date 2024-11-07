@@ -43,7 +43,7 @@ a.futura-pt:hover ul.pullDown {
 
 ul.pullDown li a {
   display: block;
-  padding: 8px 15px; /* Adjust padding as needed */
+  padding: 8px 2px; /* Adjust padding as needed */
   text-decoration: none;
   color: black;
 }

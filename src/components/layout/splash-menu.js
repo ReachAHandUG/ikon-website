@@ -34,11 +34,12 @@ ul.pullDown {
   margin: 0;
   padding: 0;
   list-style: none; /* Ensure there's no default list styling */
+  cursor:pointer;
 }
 
 a.futura-pt:hover ul.pullDown {
   display: block; /* Show the dropdown when the parent is hovered */
-  background-color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 ul.pullDown li {
@@ -118,7 +119,7 @@ return (
         </Link>
 
        <a class="futura-pt">
-    <span class="hoverContent">WINNERS</span>
+    <span class="hoverContent">WINNERS&nbsp;v</span>
     <ul class="pullDown">
         <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
         <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>

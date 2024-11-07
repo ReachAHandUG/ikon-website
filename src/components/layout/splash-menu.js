@@ -38,6 +38,7 @@ ul.pullDown {
 
 a.futura-pt:hover ul.pullDown {
   display: block; /* Show the dropdown when the parent is hovered */
+  background-color: #f0f0f0;
 }
 
 ul.pullDown li a {
@@ -47,10 +48,7 @@ ul.pullDown li a {
   color: black;
 }
 
-.hoverContent:hover .pullDown{
-background-color:white;
-color:yellow;
-}
+
 
 ul.pullDown li a:hover {
   background-color: #f0f0f0; /* Optional, to highlight the items on hover */

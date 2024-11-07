@@ -46,6 +46,7 @@ ul.pullDown li {
   display: block; /* Make sure list items behave like block elements */
   margin: 0; /* Remove any default margin */
   padding: 0; /* Remove any default padding */
+
 }
 
 ul.pullDown li a {
@@ -55,7 +56,9 @@ ul.pullDown li a {
   color: black;
 }
 
-
+.hoverContent:hover ul.pullDown li a {
+color:white;
+}
 
 
 ul.pullDown li a:hover {
@@ -119,7 +122,7 @@ return (
         </Link>
 
        <a class="futura-pt">
-    <span class="hoverContent">WINNERS&nbsp;v</span>
+    <span class="hoverContent">WINNERS</span>
     <ul class="pullDown">
         <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
         <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>

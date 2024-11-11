@@ -21,7 +21,7 @@ display: none;
 }
 
 /* Style for the anchor and dropdown */
-a.futura-pt {
+a.winnersList {
   position: relative; /* This allows positioning of the dropdown relative to the parent */
   display: inline-block; /* Allows for block behavior with inline positioning */
 }
@@ -37,7 +37,7 @@ ul.pullDown {
   cursor:pointer;
 }
 
-a.futura-pt:hover ul.pullDown {
+a.winnersList:hover ul.pullDown {
   display: block; /* Show the dropdown when the parent is hovered */
   color: #f0f0f0;
 }
@@ -124,8 +124,8 @@ return (
        <a class="futura-pt">
     <span class="hoverContent">WINNERS</span>
     <ul class="pullDown">
-        <li><a href="https://fellowship.theikon.org/winners2023/" class="futura-pt">WINNERS2023</a></li>
-        <li><a href="https://fellowship.theikon.org/winners2024/" class="futura-pt">WINNERS2024</a></li>
+        <li><a href="https://fellowship.theikon.org/winners2023/" class="winnersList">WINNERS2023</a></li>
+        <li><a href="https://fellowship.theikon.org/winners2024/" class="winnersList">WINNERS2024</a></li>
     </ul>
 </a>
 

@@ -21,49 +21,42 @@ display: none;
 }
 
 /* Style for the anchor and dropdown */
-a.winnersList {
-  position: relative; /* This allows positioning of the dropdown relative to the parent */
-  display: inline-block; /* Allows for block behavior with inline positioning */
-}
 
-ul.pullDown {
-  display: none; /* Hide the dropdown by default */
-  position: absolute; /* Position it relative to the anchor element */
-  top: 100%; /* Position it directly below the parent */
-  left: 1px;
-  margin: 0;
-  padding: 0;
-  list-style: none; /* Ensure there's no default list styling */
-  cursor:pointer;
-}
-
-a.winnersList:hover ul.pullDown {
-  display: block; /* Show the dropdown when the parent is hovered */
-  color: #f0f0f0;
-}
-
-ul.pullDown li {
-  display: block; /* Make sure list items behave like block elements */
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
-
-}
-
-ul.pullDown li a {
-  display: block;
-  padding: 8px 15px; /* Adjust padding as needed */
-  text-decoration: none;
-  color: black;
-}
-
-.hoverContent:hover ul.pullDown li a {
-color:white;
-}
-
-
-ul.pullDown li a:hover {
-  background-color: #f0f0f0; /* Optional, to highlight the items on hover */
-}
+ .hoverContent p {
+        cursor: pointer;
+      }
+      .hoverContent {
+        color: white;
+        position: relative;
+      }
+      .pullDown {
+        background-color: white;
+        color: black;
+        display: grid;
+        padding: 4px 8px;
+        width: auto;
+        position: absolute;
+        top: 100%;
+        opacity: 0; /* Initially hidden */
+        visibility: hidden; /* Initially hidden */
+        transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+      }
+      .pullDown a {
+        text-decoration: none;
+        color: black;
+        padding: 4px 0;
+        font-size: small;
+      }
+      .hoverContent:hover .pullDown {
+        opacity: 1; /* Show on hover */
+        visibility: visible; /* Show on hover */
+      }
+      .pullDown a:hover {
+        text-decoration: underline;
+      }
+      p i {
+        font-size: small;
+      }
 
 `;
 
@@ -121,13 +114,23 @@ return (
         Awards
         </Link>
 
-       <a class="futura-pt">
-    <span class="hoverContent">WINNERS</span>
-    <ul class="pullDown">
-        <li><a href="https://fellowship.theikon.org/winners2023/" class="winnersList">WINNERS2023</a></li>
-        <li><a href="https://fellowship.theikon.org/winners2024/" class="winnersList">WINNERS2024</a></li>
-    </ul>
-</a>
+     <a class="futura-pt">
+      <div class="hoverContent">
+        <p>WINNERS&nbsp;<i class="fas fa-chevron-down"></i></p>
+        <div class="pullDown">
+          <a
+            href="https://fellowship.theikon.org/winners2023/"
+            class="futura-pt"
+            >WINNERS2023</a
+          >
+          <a
+            href="https://fellowship.theikon.org/winners2024/"
+            class="futura-pt"
+            >WINNERS2024</a
+          >
+        </div>
+      </div>
+    </a>
 
 
         <Link activeClassName="is-active" to="/tribe" className="futura-pt">

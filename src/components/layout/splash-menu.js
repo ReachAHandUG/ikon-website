@@ -22,12 +22,14 @@ display: none;
 
 /* Style for the anchor and dropdown */
 
- .hoverContent p {
+.hoverContent p {
         cursor: pointer;
+        display: flex;
       }
       .hoverContent {
         color: white;
-        position: relative;
+        position: absolute;
+        inset: 0;
       }
       .pullDown {
         background-color: white;
@@ -57,7 +59,6 @@ display: none;
       p i {
         font-size: small;
       }
-
 `;
 
 
@@ -114,7 +115,7 @@ return (
         Awards
         </Link>
 
-     <a class="futura-pt">
+    <a class="futura-pt" style="position: relative; padding: 0 30px">
       <div class="hoverContent">
         <p>WINNERS&nbsp;<i class="fas fa-chevron-down"></i></p>
         <div class="pullDown">

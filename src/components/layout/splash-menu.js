@@ -21,16 +21,16 @@ display: none;
 }
 
 /* Style for the anchor and dropdown */
-
-.hoverContent p {
-        cursor: pointer;
-        display: flex;
-      }
-      .hoverContent {
+.hoverContent {
         color: white;
         position: absolute;
         inset: 0;
       }
+.hoverContent p {
+        cursor: pointer;
+        display: flex;
+      }
+      
       
       .pullDown {
         background-color: white;
@@ -116,13 +116,13 @@ return (
         Awards
         </Link>
 
-    <a class="futura-pt" style="position: relative; padding: 0 30px">
-      <div class="hoverContent">
-        <p>WINNERS&nbsp;<i class="fas fa-chevron-down"></i></p>
-        <div class="pullDown">
+    <a className="futura-pt" style={{position: 'relative',padding: '0 30px'}}>
+      <div className="hoverContent">
+        <p>WINNERS&nbsp;<i className="fas fa-chevron-down"></i></p>
+        <div className="pullDown">
           <a
             href="https://fellowship.theikon.org/winners2023/"
-            class="futura-pt"
+            className="futura-pt"
             >WINNERS2023</a
           >
           <a

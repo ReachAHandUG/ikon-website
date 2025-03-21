@@ -141,6 +141,9 @@ return (
         <a href="https://fellowship.theikon.org" target="_blank" className="futura-pt" rel="noreferrer">
             Fellowship
         </a>
+                    <a href="https://fellowship.theikon.org/ikonawards2024/" target="_blank" className="futura-pt" rel="noreferrer">
+            ikonAwards2024
+        </a>
         <a href="https://fellowship.theikon.org/ikonawards2023/" target="_blank" className="futura-pt" rel="noreferrer">
             ikonAwards2023
         </a>

@@ -253,7 +253,19 @@ const Ele = () => {
             </div>
           </a>
         </li>
-
+<li>
+          <a
+            href="https://fellowship.theikon.org/ikonawards2024/"
+            target="_blank"
+            className="futura-pt"
+            rel="noreferrer"
+          >
+            <span>ikonAwards2024</span>
+            <div>
+              <Icon title="pattern-c"></Icon>
+            </div>
+          </a>
+        </li>
    <li>
           <a
             href="https://fellowship.theikon.org/ikonawards2023/"

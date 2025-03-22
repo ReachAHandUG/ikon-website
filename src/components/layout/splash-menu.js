@@ -130,12 +130,14 @@ const Ele = () => {
                             <a
                                 href="https://fellowship.theikon.org/winners2023/"
                                 className="futura-pt"
+                                style={{ marginLeft: "0" }}
                             >
                                 WINNERS2023
                             </a>
                             <a
                                 href="https://fellowship.theikon.org/winners2024/"
                                 class="futura-pt"
+                                style={{ marginLeft: "0" }}
                             >
                                 WINNERS2024
                             </a>
@@ -171,6 +173,7 @@ const Ele = () => {
                                 href="https://fellowship.theikon.org/ikonawards2024/"
                                 target="_blank"
                                 className="futura-pt"
+                                style={{ marginLeft: "0" }}
                                 rel="noreferrer"
                             >
                                 ikonAwards2024
@@ -179,6 +182,7 @@ const Ele = () => {
                                 href="https://fellowship.theikon.org/ikonawards2023/"
                                 target="_blank"
                                 className="futura-pt"
+                                style={{ marginLeft: "0" }}
                                 rel="noreferrer"
                             >
                                 ikonAwards2023

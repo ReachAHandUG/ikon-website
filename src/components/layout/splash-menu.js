@@ -141,6 +141,13 @@ const Ele = () => {
                             >
                                 WINNERS2024
                             </a>
+                                     <a
+                                href="https://fellowship.theikon.org/winners2025/"
+                                class="futura-pt"
+                                style={{ marginLeft: "0", fontSize: "smaller" }}
+                            >
+                                WINNERS2025
+                            </a>
                         </div>
                     </div>
                 </a>

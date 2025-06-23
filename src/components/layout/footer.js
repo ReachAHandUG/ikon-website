@@ -170,7 +170,7 @@ const Ele = () => {
           </div>
         </section>
       </Map>
-      <Partners />
+      
       <Outline title="connect" />
     </Box>
   )

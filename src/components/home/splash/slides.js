@@ -174,12 +174,12 @@ const Ele = () => {
       <Videos>
         {Slides &&
           Slides.map((slide, index) => (
-            <Video
+          /* <Video
               className={active === index ? "is-active" : ""}
               key={index}
               src={slide.slide_loop.url}
               poster={slide.slide_image.fluid.src}
-            ></Video>
+            ></Video>*/
           ))}
       </Videos>
     </Box>
